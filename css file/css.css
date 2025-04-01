@@ -1,0 +1,151 @@
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+header {
+  overflow: hidden;
+  background-color: #0c5fd3;
+  padding: 20px 10px;
+  position: sticky;
+}
+  
+header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  font-weight: bold;
+  line-height: 25px;
+  border-radius: 4px;
+}
+  
+header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+  
+header a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+  
+.header-right {
+  float: right;
+}
+  
+@media screen and (max-width: 500px) {
+  header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+    
+.header-right {
+    float: none;
+  }
+}
+
+.itpIntro{
+  margin: 20px;
+  padding: 30px;
+  border: 5px solid #0c5fd3;
+  border-radius: 10px;
+}
+
+.itpIntro h1{
+  font-weight: bold;
+}
+
+.btn-expand {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* Text color */
+}
+
+.btn-collapse {
+  background-color: #828282; /* Bootstrap danger color */
+  color: white; /* Text color */
+}
+
+
+
+
+
+footer {
+  margin-top: 150px;
+  width: 100%;
+  padding: 50px; /* Adjusted padding for better spacing */
+  background-color: #0c5fd3;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Added for spacing columns */
+  text-align: center;
+}
+
+.col-1, .col-2, .col-3 {
+  flex: 1; /* Each column takes equal space */
+  padding: 0 20px; /* Added padding for better spacing */
+}
+
+.col-2 {
+  flex-grow: 2;
+}
+
+footer h3 {
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+footer a {
+  color: white; /* Ensure links are visible */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make links block elements */
+  margin: 5px 0; /* Add some spacing between links */
+}
+
+footer form {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+}
+
+footer input[type="text"] {
+  padding: 10px; /* Add padding to input */
+  margin-bottom: 10px; /* Space between input and button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+footer button {
+  padding: 10px; /* Add padding to button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #ffffff; /* Light background for button */
+  color: #0c5fd3; /* Text color matching footer */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+footer button:hover {
+  background-color: #e0e0e0; /* Change on hover */
+}
+
+#scrollToTop {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+#scrollToTop:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
