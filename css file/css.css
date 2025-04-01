@@ -106,29 +106,32 @@ footer a {
   margin: 5px 0; /* Add some spacing between links */
 }
 
-footer form {
+form {
   display: flex;
   flex-direction: column; /* Stack input and button vertically */
 }
 
-footer input[type="text"] {
+input {
   padding: 10px; /* Add padding to input */
   margin-bottom: 10px; /* Space between input and button */
   border: none; /* Remove default border */
   border-radius: 4px; /* Rounded corners */
+  text-align: center;
 }
 
-footer button {
-  padding: 10px; /* Add padding to button */
-  border: none; /* Remove default border */
-  border-radius: 4px; /* Rounded corners */
-  background-color: #ffffff; /* Light background for button */
-  color: #0c5fd3; /* Text color matching footer */
-  cursor: pointer; /* Pointer cursor on hover */
+button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-footer button:hover {
+button:hover {
   background-color: #e0e0e0; /* Change on hover */
+  color: #0c5fd3;
 }
 
 #scrollToTop {
@@ -148,4 +151,14 @@ footer button:hover {
 
 #scrollToTop:hover {
   background-color: #0056b3; /* Darker color on hover */
+}
+
+.socailIcon{
+  margin-top: 30px;
+}
+
+.socailIcon i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
 }
