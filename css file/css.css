@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body { 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,8 +16,8 @@ body {
 }
 
 .logo {
-  width: 50px; /* Set appropriate width */
-  height: 50px; /* Set appropriate height */
+  width: 70px; /* Set appropriate width */
+  height: 70px; /* Set appropriate height */
   background-image: url('../image/logo.png'); /* Path to your logo image */
   background-size: cover; /* Cover the entire div */
   background-position: center; /* Center the image */
@@ -23,8 +25,10 @@ body {
 }
 
 .logo-text {
-  font-size: 25px;
-  font-weight: bold;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 40px;
   color: rgb(255, 255, 255);
 }
 
@@ -45,8 +49,9 @@ header a {
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px; 
-    font-weight: bold;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
     line-height: 25px;
     border-radius: 4px;
 }
@@ -149,7 +154,7 @@ footer {
   margin-top: 150px;
   width: 100%;
   padding: 50px; /* Adjusted padding for better spacing */
-  background-color: #0c5fd3;
+  background-color: #3674B5;
   color: white;
   display: flex;
   justify-content: space-between; /* Added for spacing columns */
@@ -166,7 +171,8 @@ footer {
 }
 
 footer h3 {
-  font-weight: bold;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: 1px;
 }
