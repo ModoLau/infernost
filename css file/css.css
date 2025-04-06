@@ -18,9 +18,10 @@ header {
     justify-content: space-between; /* Space out logo and nav */
     align-items: center; /* Center items vertically */
     overflow: hidden;
-    background-color: #0c5fd3;
+    background-color: #3674B5;
     padding: 20px 10px;
     position: sticky;
+    z-index: 10;
     top: 0; /* Ensure sticky header works */
 }
 
@@ -41,8 +42,8 @@ header a.logo {
 }
 
 header a:hover {
-    background-color: #ffffff;
-    color: black;
+    background-color: #2e6197;
+    color: #D1F8EF;
 }
 
 .header-right {
@@ -68,6 +69,12 @@ header a:hover {
         text-align: left;
         padding: 10px; /* Adjust padding for smaller screens */
     }
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 600px;
+  object-fit:fill
 }
 
 .itpIntro{
