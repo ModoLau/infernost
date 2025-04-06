@@ -196,6 +196,10 @@ footer a:hover {
   color: #A1E3F9; /* Ensure links are visible */
 }
 
+.col{
+ padding: 10px;
+}
+
 form {
   display: flex;
   flex-direction: column; /* Stack input and button vertically */
