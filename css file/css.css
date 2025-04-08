@@ -121,10 +121,24 @@ nav .close-button, .menu-bar{
     font-size: 70px;
 }
 
-.about-me h2{
+.about-me h2 {
     font-family: "Kanit", sans-serif;
     font-weight: 500;
     font-size: 40px;
+    overflow: hidden; /* Ensures text is hidden until revealed */
+    border-right: 3px solid; /* Cursor effect */
+    white-space: nowrap; /* Prevent line breaks */
+    width: 0; /* Start with width 0 for typing effect */
+    animation: typing 2s steps(29) forwards, cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent; }
 }
 
 .about-me p {
@@ -167,22 +181,53 @@ nav .close-button, .menu-bar{
     text-decoration: none;
 }
 
+.about-me-img{
+    padding: 20%;
+}
+
 .about-me-img .img-box{
+    position: relative;
     width: 32vw;
     height: 32vw;
-    background: #D1F8EF;
     border-radius: 50%;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-me-img .img-box::before,
+.about-me-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #D1F8EF);
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.about-me-img .img-box::after{
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border{
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .about-me-img .img-box .img{
     position: relative;
     width: 100%;
     height: 100%;
-    background: #A1E3F9;
+    background: #3674B5;
+    border: 0.1px solid #3674B5;
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    z-index: 1;
     overflow: hidden;
 }
 
