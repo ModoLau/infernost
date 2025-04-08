@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 header{
     min-height: 100vh;
     width: 100%;
@@ -182,13 +186,14 @@ nav .close-button, .menu-bar{
 }
 
 .about-me-img{
-    padding: 20%;
+    padding: 70px;
 }
 
-.about-me-img .img-box{
+.about-me-img .img-box {
     position: relative;
-    width: 32vw;
-    height: 32vw;
+    width: 100%; /* Use full available width */
+    max-width: 400px; /* Set a maximum width to prevent overflow */
+    height: auto; /* Adjust height accordingly */
     border-radius: 50%;
     padding: 5px;
     display: flex;
@@ -231,14 +236,11 @@ nav .close-button, .menu-bar{
     overflow: hidden;
 }
 
-.about-me-img .img-box .img img{
-    position: absolute;
-    display: block;
-    left: 35px;
-    width: 85%;
-    object-fit: cover;
+.about-me-img .img-box .img img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the box */
 }
-
 
 @media(max-width: 700px){
     .intro h1{
@@ -270,5 +272,17 @@ nav .close-button, .menu-bar{
         font-size: 22px;
         cursor: pointer;
         width: 30px;
+    }
+    .about-me h1{
+        font-size:30px;
+    }
+    .about-me h2{
+        font-size:15px;
+    }
+    .about-me p{
+        font-size:10px;
+    }
+    .about-me .socailIcon .know-more-button{
+        font-size:10px;
     }
 }
