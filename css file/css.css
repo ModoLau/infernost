@@ -103,12 +103,8 @@ nav img{
     color: #3674B5;
 }
 
-nav .close-button{
+nav .close-button, .menu-bar{
     display: none;
-}
-
-nav .menu-bar{
-
 }
 
 @media(max-width: 700px){
@@ -132,10 +128,11 @@ nav .menu-bar{
         right: -200px;
         text-align: left;
         z-index: 2;
+        transition: 0.7s;
     }
-    nav .close-button{
+    nav .close-button, .menu-bar{
         display: block;
-        color: rgb(255, 255, 255);
+        color: #fff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
