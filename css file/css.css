@@ -118,13 +118,13 @@ nav .close-button, .menu-bar{
 .about-me h1{
     font-family: "Kanit", sans-serif;
     font-weight: 700;
-    font-size: 90px;
+    font-size: 70px;
 }
 
 .about-me h2{
     font-family: "Kanit", sans-serif;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .about-me p {
@@ -153,6 +153,48 @@ nav .close-button, .menu-bar{
     color: #000000;
     box-shadow: 0 0 10px #D1F8EF;
 }
+
+.about-me .socailIcon .know-more-button{
+    display: inline-block;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid #A1E3F8;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #A1E3F8;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.about-me-img .img-box{
+    width: 32vw;
+    height: 32vw;
+    background: #D1F8EF;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.about-me-img .img-box .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #A1E3F9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-me-img .img-box .img img{
+    position: absolute;
+    display: block;
+    left: 35px;
+    width: 85%;
+    object-fit: cover;
+}
+
+
 @media(max-width: 700px){
     .intro h1{
         font-family: "Kanit", sans-serif;
