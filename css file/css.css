@@ -111,77 +111,96 @@ nav .close-button, .menu-bar{
     display: none;
 }
 
-.about{
-    min-height: 100vh;
-    padding: 10rem 12%;
+.content{
+    background-color: #061b3c;
     display: flex;
     align-items: center;
+    height: 100vh;
+    padding: 8rem;
+    color: #fff;
+}
+.about-me{
+    align-items: center;
     justify-content: center;
-    gap: 15rem;
+    
 }
-
-.about-content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-}
-
-.about-content h1{
+.text-content h1{
     font-family: "Kanit", sans-serif;
-    font-size: 8rem;
     font-weight: 700;
-    margin-top: 1.5rem;
-    line-height: 1;
+    font-size: 70px;
 }
 
-.about-content h3{
+.text-content .typewriter {
     font-family: "Kanit", sans-serif;
-    font-size: 4rem;
-    margin: 1rem 0;
-}
-
-.about-content p{
-    font-family: "Kanit", sans-serif;
-    font-size: 1.5rem;
     font-weight: 500;
+    font-size: 30px;
+    border-right: 3px solid; /* Cursor effect */
+    white-space: nowrap; /* Prevent line breaks */
+    display: inline-block;
+    animation: 
+        typing s steps(31) forwards, 
+        cursor 0.34s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0%; }
+    to {width: 62%;}
+}
+
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
+
+.text-content p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
     line-height: 1.8;
 }
 
-.scicon a{
-    display: flex;
+.about-me .socailIcon a{
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
     padding: 1rem;
-    border: 2px solid #000000;
-    background: transparent;
+    border: 2px solid #D1F8EF;
     border-radius: 50%;
-    color: #122cae;
-    margin: 3rem 0.5rem;
-    transition: 0.3s ease;
+    font-size: 3rem;
+    color: #fff;
+    margin: 10px;
 }
 
-.scicon a:hover{
+.about-me .socailIcon a:hover{
     background-color: #fff;
-    color: #ff0000;
-    transform: scale(1.2)translateY(-5px);
-    box-shadow: 0 0 25px #D1F8EF;
+    color: #000000;
+    box-shadow: 0 0 10px #D1F8EF;
 }
 
-.knowMore-btn{
-
+.about-me .socailIcon .know-more-button{
+    display: inline-block;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid #A1E3F8;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #A1E3F8;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.about-img{
+.about-me-img {
     width: 100%; /* Ensure it takes full width */
-    display: flex;
+    padding: 15%;
     justify-content: center; /* Center the image box */
     margin-top: 20px; /* Add spacing */
 }
 
-.about-img .img-box{
+.about-me-img .img-box {
     position: relative;
+    width: 80%; /* Use a percentage to make it responsive */
+    max-width: 400px; /* Set a maximum width */
+    aspect-ratio: 1; /* Maintain a square aspect ratio */
     border-radius: 50%;
     padding: 5px;
     display: flex;
@@ -190,19 +209,43 @@ nav .close-button, .menu-bar{
     overflow: hidden;
 }
 
-.about-img .img-box::before,
-.about-img .img-box::after{
+.about-me-img .img-box::before,
+.about-me-img .img-box::after{
     content: '';
     position: absolute;
     width: 500px;
     height: 500px;
-    background: conic-gradient(transparent, transparent, transparent, #000000);
+    background: conic-gradient(transparent, transparent, transparent, #D1F8EF);
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
 }
 
-.about-img .img-box::after{
+.about-me-img .img-box::after{
     animation-delay: -5s;
+}
+
+@keyframes rotate-border{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.about-me-img .img-box .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #061b3c;
+    border: 0.1px solid #061b3c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.about-me-img .img-box .img img {
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the box */
 }
 
 @keyframes rotate-border{
@@ -215,8 +258,8 @@ nav .close-button, .menu-bar{
     position: relative;
     width: 100%;
     height: 100%;
-    background: #3674B5;
-    border: 0.1px solid #3674B5;
+    background: #061b3c;
+    border: 0.1px solid #061b3c;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -236,7 +279,7 @@ nav .close-button, .menu-bar{
     margin: 20px;
 }
 
-@media(max-width: 700px){
+@media(max-width: 768px){
     .intro h1{
         font-family: "Kanit", sans-serif;
         font-weight: 700;
@@ -250,7 +293,7 @@ nav .close-button, .menu-bar{
     }
     .nav-link{
         position: absolute;
-        background: #3674B5;
+        background: #061b3c;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -266,5 +309,39 @@ nav .close-button, .menu-bar{
         font-size: 22px;
         cursor: pointer;
         width: 30px;
+    }
+    .content {
+        flex-direction: column-reverse; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 5rem; /* Adjust padding for mobile */
+    }
+
+    .about-me-img {
+        margin-right: 0; /* Reset margin */
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .img-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-me {
+        align-items: center;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .about-me h1 {
+        font-size: 30px; /* Adjust font size for mobile */
+    }
+
+    .about-me h2 {
+        align-items: center;
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .about-me p {
+        align-items: center;
+        font-size: 15px; /* Adjust font size for mobile */
     }
 }

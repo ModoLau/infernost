@@ -7,6 +7,7 @@ function hideMenu(){
     navLink.style.right = "-200px";
 }
 
+
 const typewriter = document.getElementById('typewriter');
 const fullText = "I am a School Head IT Prefect";
 let typing = false;
@@ -14,6 +15,9 @@ let typing = false;
 function typeText() {
     let index = 0;
     typing = true;
+    
+    // Clear existing text before starting
+    typewriter.textContent = '';
 
     const interval = setInterval(() => {
         if (index < fullText.length) {
@@ -25,3 +29,8 @@ function typeText() {
         }
     }, 100); // Adjust typing speed
 }
+
+// Start typing effect when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+    typeText();
+});
