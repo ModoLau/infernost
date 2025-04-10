@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -27,6 +28,10 @@ nav{
 
 nav img{
     width: 150px;
+}
+
+nav a{
+    text-decoration: none;
 }
 
 .nav-link{
@@ -115,7 +120,7 @@ nav .close-button, .menu-bar{
     background-color: #061b3c;
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: auto;
     padding: 8rem;
     color: #fff;
 }
@@ -191,7 +196,7 @@ nav .close-button, .menu-bar{
 
 .about-me-img {
     width: 100%; /* Ensure it takes full width */
-    padding: 15%;
+    padding: 10%;
     justify-content: center; /* Center the image box */
     margin-top: 20px; /* Add spacing */
 }
@@ -322,9 +327,12 @@ nav .close-button, .menu-bar{
     }
 
     .img-box {
-        width: 200px;
-        height: 200px;
+        max-width: 80%;
+        width: 30rem;
+        height: 30rem;
     }
+
+
 
     .about-me {
         align-items: center;
@@ -332,7 +340,7 @@ nav .close-button, .menu-bar{
     }
 
     .about-me h1 {
-        font-size: 30px; /* Adjust font size for mobile */
+        font-size: 34px; /* Adjust font size for mobile */
     }
 
     .about-me h2 {
@@ -343,5 +351,8 @@ nav .close-button, .menu-bar{
     .about-me p {
         align-items: center;
         font-size: 15px; /* Adjust font size for mobile */
+    }
+    .text-content .typewriter{
+        font-size: 20px;
     }
 }
