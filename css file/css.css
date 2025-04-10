@@ -301,7 +301,8 @@ nav .close-button, .menu-bar{
 }
 
 .ITP-intro{
-    margin: 20px;
+    background-color: #061b3c;
+    height: 100vh;
 }
 
 .ITP-intro h1{
@@ -309,6 +310,7 @@ nav .close-button, .menu-bar{
     font-weight: 700;
     font-size: 60px;
     margin: 0% 30%;
+    margin-bottom: 20px;
     text-align: center;
     justify-content: center;
     align-items:center ;
@@ -316,7 +318,102 @@ nav .close-button, .menu-bar{
     border-radius: 50px;
     background-color: #3674B5;
 }
+.card-box-patrol,
+.card-box-ctrm,
+.card-box-stage {
+    position: relative;
+    height: 100%; /* Ensure card height is the same */
+    margin: 10px;
+    top: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #3674B5; /* Card background */
+}
 
+.card-box-patrol::before {
+    position: absolute;
+    content: "";
+    width: 700px; /* Size of the gradient */
+    height: 700px; /* Size of the gradient */
+    background: radial-gradient(#00e0fd, transparent, transparent);
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s, top 0s, left 0s;
+    z-index: 0; /* Behind card content */
+}
+
+.card-box-ctrm::before {
+    position: absolute;
+    content: "";
+    width: 700px; /* Size of the gradient */
+    height: 700px; /* Size of the gradient */
+    background: radial-gradient(#fff127, transparent, transparent);
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s, top 0s, left 0s;
+    z-index: 0; /* Behind card content */
+}
+
+.card-box-stage::before {
+    position: absolute;
+    content: "";
+    width: 700px; /* Size of the gradient */
+    height: 700px; /* Size of the gradient */
+    background: radial-gradient(#c49002, transparent, transparent);
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s, top 0s, left 0s;
+    z-index: 0; /* Behind card content */
+}
+
+.card-box-patrol:hover::before,
+.card-box-ctrm:hover::before,
+.card-box-stage:hover::before {
+    opacity: 1; /* Show gradient on hover */
+}
+
+.card-box-patrol img,
+.card-box-ctrm img,
+.card-box-stage img {
+    border-radius: 20px; /* Match border radius of the card */
+    z-index: 1; /* Ensure image is above the gradient */
+    position: relative; /* Keep image on top */
+}
+
+.card-box-patrol::after,
+.card-box-ctrm::after,
+.card-box-stage::after{
+    position: absolute;
+    content: "";
+    inset: 3px;
+    background: rgba(45, 45, 45, 0.85);
+    border-radius: 18px;
+    z-index: 0; /* Below the text and image */
+}
+
+.card-photo {
+    padding: 8px;
+    width: 100%; /* 確保圖片寬度填滿卡片 */
+    height: 450px; /* 設置統一高度 */
+    object-fit: cover; /* 保持圖片比例，裁剪多餘部分 */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 確保內容均勻分佈 */
+    color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+    position: relative; /* Keep text content on top */
+    z-index: 1; /* Ensure text is above the gradient */
+}
 @media(max-width: 768px){
     .intro h1{
         font-family: "Kanit", sans-serif;
@@ -391,5 +488,12 @@ nav .close-button, .menu-bar{
     }
     .text-content .typewriter{
         font-size: 20px;
+    }
+    .card {
+        height: 100%; /* 確保卡片高度相同 */
+        margin: 20px;
+    }
+    .ITP-intro{
+        height: 100%;
     }
 }
