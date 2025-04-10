@@ -28,10 +28,16 @@ nav{
 
 nav img{
     width: 150px;
+    margin-right: 20px;
 }
 
 nav a{
+    pointer-events: none;
     text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: #fff;
 }
 
 .nav-link{
@@ -67,17 +73,26 @@ nav a{
     width: 100%;
 }
 
-.intro{
+.intro {
     width: 90%;
     color: #A1E3F9;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, 10%); /* 初始位置在下面 */
     text-align: center;
+    opacity: 0; /* 開始為隱藏 */
+    animation: slideIn 0.6s forwards; /* 滑入動畫 */
 }
 
-.intro h1{
+@keyframes slideIn {
+    to {
+        transform: translate(-50%, -50%); /* 最終位置在中心 */
+        opacity: 1; /* 完全可見 */
+    }
+}
+
+.intro h1 {
     color: #fff;
     font-family: "Kanit", sans-serif;
     font-weight: 700;
@@ -88,7 +103,7 @@ nav a{
     margin: 10px 0 40px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .about-button{
@@ -99,7 +114,7 @@ nav a{
     padding: 12px 34px;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 20px;
     background: transparent;
     position: relative;
     cursor: pointer;
@@ -109,7 +124,7 @@ nav a{
     border: 1px solid #3674B5;
     background-color: #A1E3F9;
     transition: 0.7s;
-    color: #286cb4;
+    color: #061b3c;
 }
 
 nav .close-button, .menu-bar{
@@ -154,6 +169,11 @@ nav .close-button, .menu-bar{
 
 @keyframes cursor {
     50% { border-color: transparent; }
+}
+
+@keyframes reverseTyping {
+    from { width: 62%; }
+    to { width: 0; }
 }
 
 .text-content p {
@@ -284,11 +304,30 @@ nav .close-button, .menu-bar{
     margin: 20px;
 }
 
+.ITP-intro h1{
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin: 0% 30%;
+    text-align: center;
+    justify-content: center;
+    align-items:center ;
+    border: 2px solid #061b3c;
+    border-radius: 50px;
+    background-color: #3674B5;
+}
+
 @media(max-width: 768px){
     .intro h1{
         font-family: "Kanit", sans-serif;
         font-weight: 700;
         font-size: 40px;
+    }
+    nav img{
+        width: 100px;
+    }
+    nav a{
+        font-size: 30px;
     }
     .nav-link ul{
         padding: 30px;
@@ -331,8 +370,6 @@ nav .close-button, .menu-bar{
         width: 30rem;
         height: 30rem;
     }
-
-
 
     .about-me {
         align-items: center;
