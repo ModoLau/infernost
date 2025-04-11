@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', onScroll);
 });
 
-let cards = document.querySelectorAll('.card-box-patrol, .card-box-ctrm, .card-box-stage');
+let cards = document.querySelectorAll('.card-box-patrol, .card-box-ctrm, .card-box-stage, .card-box-aud');
 
 cards.forEach(card => {
     card.onmousemove = (e) => {
