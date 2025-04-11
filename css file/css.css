@@ -458,15 +458,13 @@ nav .close-button, .menu-bar{
 }
 
 .diagram{
-    background-color: #00fdfd;
-    color: #00fdfd;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    transition: all ease .4s;
     flex: 0 0 30%; /* Set width to 30% */
-    max-width: 30%; /* Ensure it does not exceed 30% */
-    padding: 10px; /* Remove padding */
-}
-.diagram img {
-    width: 100%; /* Ensure the image fills the space */
-    height: auto; /* Maintain aspect ratio */
 }
 
 @media(max-width: 768px){
