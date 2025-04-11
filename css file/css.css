@@ -32,7 +32,6 @@ nav img{
 }
 
 nav a{
-    pointer-events: none;
     text-decoration: none;
     font-family: "Kanit", sans-serif;
     font-weight: 600;
@@ -213,6 +212,12 @@ nav .close-button, .menu-bar{
     font-weight: 400;
     font-size: 20px;
     text-decoration: none;
+}
+
+.about-me .socailIcon .know-more-button:hover{
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px #D1F8EF;
 }
 
 .about-me-img {
@@ -459,7 +464,6 @@ footer{
     background: #245c97;
     color: #fff;
     padding: 100px 0 30px;
-    border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
 }
@@ -479,19 +483,42 @@ footer{
 .fot-col:nth-child(2), .fot-col:nth-child(3){
     flex-basis: 15%;
 }
-
+.fot-col .logo-container {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
 .logo{
-    width: 80px;
-    margin-bottom: 30px
+    padding-right: ;
+    width: 100px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+.fot-col .logo-container h6{
+    color: #fff; /* Change the text color */
+    font-family: "Kanit", sans-serif; /* Use the same font */
+    font-weight: 600; /* Adjust font weight */
+    font-size: 40px; /* Adjust font size as needed */
 }
 .fot-col h3{
     width: fit-content;
     margin-bottom: 40px;
     position: relative;
 }
+.fot-col a{
+    text-decoration: none;
+    color: #fff;
+}
+.fot-col a:hover{
+    text-decoration: underline;
+}
+
+.fot-col h5{
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
 .email{
     width: fit-content;
-    border-bottom: 1px solid #ccc;
     margin: 20px 0;
 }
 ul li{
@@ -521,12 +548,24 @@ form .sub-btn{
     width: 100px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #A1E3F8;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #A1E3F8;
+    text-decoration: none;
+}
+
+form .sub-btn:hover{
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px #D1F8EF;
 }
 input::placeholder{
     color: #fff;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 hr{
@@ -542,7 +581,7 @@ hr{
 .line{
     width: 100%;
     height: 5px;
-    background: #767676;
+    background: #061b3c;
     border-radius: 3px;
     position: absolute;
     top: 35px;
@@ -552,7 +591,7 @@ hr{
 .line span{
     width: 15px;
     height: 100%;
-    background: #fff;
+    background: #D1F8EF;
     border-radius: 3px;
     position: absolute;
     top: 0;
