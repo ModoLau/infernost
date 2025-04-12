@@ -633,24 +633,113 @@ hr{
     flex-direction: column;
 }
 
-.contact-text{
+.contact-intro{
     max-width: 800px;
     text-align: left;
 }
 
-.contact-text h3{
+.contact-intro h3{
     font-family: "Kanit";
     font-weight: 600;
     font-size: 50px;
     color: #fff;
 }
 
-.contact-text p{
+.contact-intro p{
     font-family: "Kanit";
     font-weight: 6300;
     font-size: 15px;
     color: #fff;
 }
+.information{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: #061b3c;
+    margin-top: 30px;
+}
+.information .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.information .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+}
+.information .contactInfo .box .icon{
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    background: repeating-conic-gradient(from 30deg, #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.information .contactInfo .box .icon::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from 117.5deg, #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+}
+.information .contactInfo .box .icon::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #061b3c;
+}
+
+.information .contactInfo .box .icon b{
+    position: absolute;
+    inset: 8px;
+    background: #A1E3F8;
+    z-index: 2;
+}
+.information .contactInfo .box .icon svg{
+    position: relative;
+    z-index: 1000;
+    color: #061b3c;
+    width: 30px;
+}
+.information .contactInfo .box .text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #A1E3F8;
+    font-family: 300;
+}
+.information .contactInfo .box .text h3{
+    font-family: "Kanit";
+    font-weight: 600;
+    font-size: 50px;
+}
+.information .contactInfo .box .text a{
+    text-decoration: none;
+}
+.information .contactInfo .connect-title{
+    color: #ffffff;
+    margin-top: 50px;
+    padding-left: 10px;
+    line-height: 1em;
+    border-left: 50px solid #A1E3F8;
+    font-family: "Kanit";
+    font-weight: 600;
+    font-size: 30px;
+}
+.contact-sci {
+    position: relative;
+    padding-left: 50px;
+}
+
+
+
+
 
 #scrollToTop {
     display: none; /* Initially hidden */
