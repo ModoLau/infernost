@@ -19,6 +19,11 @@ header{
     position: relative;
 }
 
+.header-contact{
+    min-height: auto;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/bg-contact.jpg);
+}
+
 nav{
     display: flex;
     padding: 2% 6%;
@@ -81,7 +86,7 @@ nav a{
     transform: translate(-50%, 10%); /* 初始位置在下面 */
     text-align: center;
     opacity: 0; /* 開始為隱藏 */
-    animation: slideIn 0.6s forwards; /* 滑入動畫 */
+    animation: slideIn 0.7s forwards; /* 滑入動畫 */
 }
 
 
@@ -145,13 +150,13 @@ nav .close-button, .menu-bar{
     
 }
 .text-content h1{
-    font-family: "Kanit", sans-serif;
+    font-family: "Kanit";
     font-weight: 700;
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .text-content .typewriter {
-    font-family: "Kanit", sans-serif;
+    font-family: "Kanit";
     font-weight: 500;
     font-size: 30px;
     border-right: 3px solid; /* Cursor effect */
@@ -177,9 +182,9 @@ nav .close-button, .menu-bar{
 }
 
 .text-content p {
-    font-family: "Kanit", sans-serif;
+    font-family: "Kanit";
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 20px;
     line-height: 1.8;
 }
 
@@ -230,7 +235,7 @@ nav .close-button, .menu-bar{
 .about-me-img .img-box {
     position: relative;
     width: 80%; /* Use a percentage to make it responsive */
-    max-width: 400px; /* Set a maximum width */
+    max-width: 500px; /* Set a box size */
     aspect-ratio: 1; /* Maintain a square aspect ratio */
     border-radius: 50%;
     padding: 5px;
@@ -241,7 +246,7 @@ nav .close-button, .menu-bar{
 }
 
 .about-me-img .img-box::before,
-.about-me-img .img-box::after{
+.about-me-img .img-box::after{ /* effect */
     content: '';
     position: absolute;
     width: 500px;
@@ -615,6 +620,57 @@ hr{
         left: 100%;
     }
 }
+
+.contact{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/bg-contact.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-text{
+    max-width: 800px;
+    text-align: left;
+}
+
+.contact-text h3{
+    font-family: "Kanit";
+    font-weight: 600;
+    font-size: 50px;
+    color: #fff;
+}
+
+.contact-text p{
+    font-family: "Kanit";
+    font-weight: 6300;
+    font-size: 15px;
+    color: #fff;
+}
+
+#scrollToTop {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  #scrollToTop:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
 @media(max-width: 768px){
     .intro h1{
         font-family: "Kanit", sans-serif;

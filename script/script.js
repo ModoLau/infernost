@@ -10,59 +10,64 @@ function hideMenu(){
 
 const typewriter = document.getElementById('typewriter');
 const fullText = "I am a School Head IT Prefect";
-let typing = false;
 let hasTyped = false;
+let intervalId;
 
 function typeText() {
     let index = 0;
-    typing = true;
-    
-    // Clear existing text before starting
+
+    // 清除现有文本
     typewriter.textContent = '';
 
-    const interval = setInterval(() => {
+    intervalId = setInterval(() => {
         if (index < fullText.length) {
             typewriter.textContent += fullText.charAt(index);
             index++;
         } else {
-            clearInterval(interval);
-            typing = false;
-            hasTyped = true; // 設置為已打字完成
+            clearInterval(intervalId);
+            hasTyped = true; // 设置为已打字完成
         }
-    }, 100); // 調整打字速度
+    }, 100); // 调整打字速度
 }
 
 function reverseText() {
-    let index = fullText.length - 1;
-    typing = true;
+    let index = typewriter.textContent.length;
 
-    const interval = setInterval(() => {
-        if (index >= 0) {
-            typewriter.textContent = typewriter.textContent.slice(0, index);
+    intervalId = setInterval(() => {
+        if (index > 0) {
+            typewriter.textContent = typewriter.textContent.slice(0, index - 1); // 移除最后一个字符
             index--;
         } else {
-            clearInterval(interval);
-            typing = false;
+            clearInterval(intervalId);
+            hasTyped = false; // 重置状态以便再次触发打字
         }
-    }, 100); // 調整反向速度
+    }, 50); // 调整反向速度
 }
 
-function onScroll() {
-    const rect = typewriter.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+// 创建一个 Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !hasTyped) {
+            typeText(); // 当元素在视口内时触发打字
+        } else if (!entry.isIntersecting && hasTyped) {
+            reverseText(); // 离开视口时触发反向打字
+        }
+    });
+});
 
-    // 當元素進入視口範圍內開始動畫
-    if (rect.top < windowHeight && rect.bottom >= 0 && !hasTyped) {
-        typeText();
-        window.removeEventListener('scroll', onScroll); // 移除事件監聽器，防止重複觸發
-    }
+// 观察目标元素
+observer.observe(typewriter);
 
-    // 當元素即將離開視口範圍開始反向動畫
-    if (rect.bottom < 0 && hasTyped) {
-        reverseText();
-        hasTyped = false; // 重置狀態
+// 监听页面滚动事件
+window.addEventListener('scroll', () => {
+    if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+        // 当用户滚动到页面底部时，清除文本
+        typewriter.textContent = '';
+        hasTyped = false; // 重置状态
     }
-}
+});
+
+
 
 // 當 DOM 完全加載後開始監聽滾動事件
 document.addEventListener("DOMContentLoaded", () => {
