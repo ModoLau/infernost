@@ -535,7 +535,10 @@ footer{
     width: fit-content;
     margin: 20px 0;
 }
-ul li{
+.fot-col ul{
+    padding-left: 0%;
+}
+.fot-col ul li{
     list-style: none;
     margin-bottom: 12px;
 }
@@ -543,7 +546,7 @@ ul li a{
     text-decoration: none;
     color: #fff;
 }
-form{
+.fot-col form{
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -551,14 +554,40 @@ form{
     border-bottom: 1px solid#fff;
     margin-bottom: 50px;
 }
-form input{
+.fot-col .inputBox {
+    position: relative;
     width: 100%;
-    background: transparent;
-    color: #ccc;
-    border: 0;
-    outline: none;
+    margin-top: 20px; /* Adjust as needed */
 }
-form .sub-btn{
+.fot-col form .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+}
+.fot-col .inputBox span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    color: #fff; /* Placeholder color */
+    transition: 0.5s;
+    font-family: "Kanit";
+    font-weight: 400;
+    font-size: 25px;
+}
+.fot-col form .inputBox input:focus ~ span,
+.fot-col form .inputBox input:valid ~ span{
+    color: #A1E3F8;
+    font-size: 20px;
+    transform: translateY(-24px);
+}
+.fot-col form .sub-btn{
     width: 100px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
@@ -570,7 +599,7 @@ form .sub-btn{
     text-decoration: none;
 }
 
-form .sub-btn:hover{
+.fot-col form .sub-btn:hover{
     background-color: #fff;
     color: #000000;
     box-shadow: 0 0 10px #D1F8EF;
@@ -623,36 +652,35 @@ hr{
 
 .contact{
     min-height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/bg-contact.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-    padding: 50px 100px;
+    padding: 0px 100px 20px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .contact-intro{
-    max-width: 800px;
+    max-width: 900px;
     text-align: left;
 }
 
 .contact-intro h3{
     font-family: "Kanit";
-    font-weight: 600;
-    font-size: 50px;
+    font-weight: 700;
+    font-size: 70px;
     color: #fff;
 }
 
 .contact-intro p{
     font-family: "Kanit";
-    font-weight: 6300;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 18px;
     color: #fff;
 }
 .information{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -661,13 +689,13 @@ hr{
     margin-top: 30px;
 }
 .information .contactInfo{
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
 }
 .information .contactInfo .box{
     position: relative;
-    padding: 20px 0;
+    padding: 30px 0;
     display: flex;
     cursor: pointer;
 }
@@ -696,7 +724,7 @@ hr{
 .information .contactInfo .box .icon b{
     position: absolute;
     inset: 8px;
-    background: #A1E3F8;
+    background: #84bfff;
     z-index: 2;
 }
 .information .contactInfo .box .icon svg{
@@ -707,7 +735,6 @@ hr{
 }
 .information .contactInfo .box .text{
     position: relative;
-    display: flex;
     flex-direction: column;
     margin-left: 20px;
     font-size: 18px;
@@ -721,26 +748,138 @@ hr{
 }
 .information .contactInfo .box .text a{
     text-decoration: none;
+    color: #fff;
+}
+.information .contactInfo .box .text a:hover{
+    text-decoration: underline;
+}
+.information .contactInfo .box .text p{
+    color: #fff;
 }
 .information .contactInfo .connect-title{
     color: #ffffff;
     margin-top: 50px;
-    padding-left: 10px;
+    padding-left: 15px;
     line-height: 1em;
-    border-left: 50px solid #A1E3F8;
+    border-left: 50px solid #84bfff;
     font-family: "Kanit";
     font-weight: 600;
-    font-size: 30px;
+    font-size: 50px;
 }
 .contact-sci {
     position: relative;
     padding-left: 50px;
 }
 
+.information .contactForm{
+    position: relative;
+    width: 40%;
+    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+    animation: animate 6s linear infinite;
+    padding: 60px;
+    display: flex;               /* Enable flexbox */
+    flex-direction: column;      /* Arrange items in a column */
+}
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate{
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a:360deg;
+    }
+}
+.information .contactForm::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.information .contactForm::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 20px solid #061b3c;
+    background: #578FCA;
+}
+.information .contactForm form{
+    position: relative;
+    z-index: 10;
+    display: flex;               /* Enable flexbox for the form */
+    flex-direction: column;      /* Arrange inputs in a column */
+}
+.information .contactForm form .inputBox:last-child {
+    display: flex;               /* Enable flexbox for the last input box */
+    justify-content: flex-end;   /* Align the button to the right */
+}
+.information .contactForm form h2{
+    font-family: "Kanit";
+    font-weight: 600;
+    font-size: 60px;
+    color: #061b3c;
+}
+.information .contactForm form .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
 
+.information .contactForm form .inputBox input,
+.information .contactForm form .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #061b3c;
+    color: #fff;
+    outline: none;
+    resize: none;
+}
 
-
-
+.information .contactForm form .inputBox span{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    color: #fff;
+    transition: 0.5s;
+    font-family: "Kanit";
+    font-weight: 400;
+    font-size: 22px;
+}
+.information .contactForm form .inputBox input:focus ~ span,
+.information .contactForm form .inputBox textarea:focus ~ span,
+.information .contactForm form .inputBox input:valid ~ span,
+.information .contactForm form .inputBox textarea:valid ~ span{
+    color: #061b3c;
+    font-size: 16px;
+    transform: translateY(-24px);
+}
+.information .contactForm form .inputBox .sub-btn{
+    height: 50px;
+    width: 100px;
+    font-family: "Kanit";
+    font-weight: 400;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #A1E3F8;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #A1E3F8;
+    text-decoration: none;
+}
+.information .contactForm form .inputBox .sub-btn:hover{
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px #D1F8EF;
+}
 #scrollToTop {
     display: none; /* Initially hidden */
     position: fixed; /* Fixed position */
@@ -754,11 +893,11 @@ hr{
     font-size: 16px; /* Font size */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth background color transition */
-  }
+}
   
-  #scrollToTop:hover {
-    background-color: #0056b3; /* Darker color on hover */
-  }
+#scrollToTop:hover {
+background-color: #0056b3; /* Darker color on hover */
+}
   
 @media(max-width: 768px){
     .intro h1{
@@ -851,5 +990,22 @@ hr{
     }
     .fot-col:nth-child(2), .fot-col:nth-child(3){
         flex-basis: 100%;
+    }
+    .contact{
+        padding: 50px;
+    }
+    .information{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .information .contactInfo,
+    .information .contactForm{
+        width: 100%;
+    }
+    .information .contactForm{
+        padding: 40px;
+    }
+    .information .contactForm form{
+        padding: 10px;
     }
 }
