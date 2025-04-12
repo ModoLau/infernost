@@ -313,7 +313,7 @@ nav .close-button, .menu-bar{
 }
 
 .ITP-intro h1{
-    font-family: "Kanit", sans-serif;
+    font-family: "Kanit";
     font-weight: 700;
     font-size: 60px;
     margin: 0% 30%;
@@ -324,10 +324,11 @@ nav .close-button, .menu-bar{
     border: 2px solid #061b3c;
     border-radius: 50px;
     background-color: #3674B5;
+    color: #061b3c;
 }
 .ITP-intro h3{
-    font-family: "Kanit", sans-serif;
-    font-weight: 700;
+    font-family: "Kanit";
+    font-weight: 600;
     font-size: 25px;
     padding: 10px;
     margin: 0% 10%;
@@ -445,9 +446,18 @@ nav .close-button, .menu-bar{
     height: 450px;
     object-fit: cover;
 }
-
+.card-title{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 25px;
+}
+.card-text{
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 2px;
+}
 .card-body { /*text content part-setting */
-    display: flex;
     flex-direction: column;
     justify-content: space-between; /* 確保內容均勻分佈 */
     color: #fff;
@@ -463,7 +473,7 @@ footer{
     bottom: 0;
     background: #245c97;
     color: #fff;
-    padding: 100px 0 30px;
+    padding: 40px 0 30px;
     font-size: 13px;
     line-height: 20px;
 }
@@ -488,7 +498,6 @@ footer{
     align-items: center; /* Center items vertically */
 }
 .logo{
-    padding-right: ;
     width: 100px;
     margin-bottom: 30px;
     margin-right: 10px;
