@@ -7,7 +7,6 @@ function hideMenu(){
     navLink.style.right = "-200px";
 }
 
-
 const typewriter = document.getElementById('typewriter');
 const fullText = "I am a School Head IT Prefect";
 let hasTyped = false;

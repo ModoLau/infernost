@@ -1,41 +1,4 @@
-.timeline-container {
-  width: 100%;
-  position: relative;
-  padding: 80px 0;
-  transition: 0.3s ease 0s;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.timeline-container:before { /*background-setting*/
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(99, 99, 99, 0.8);
-  content: "";
-}
-.timeline-header {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 80px;
-  position: relative;
-}
-.timeline-header__title {
-  color: #fff;
-  font-size: 46px;
-  font-family: Cardo;
-  font-weight: normal;
-  margin: 0;
-}
-.timeline-header__subtitle {
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Pathway Gothic One", sans-serif;
-  font-size: 16px;
-  letter-spacing: 5px;
-  margin: 10px 0 0 0;
-  font-weight: normal;
-}
+@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
 .timeline {
   display: flex;
   margin: 0 auto;
@@ -63,7 +26,7 @@
   font-weight: normal;
   line-height: 25px;
 }
-.timeline:before { /* line */
+.timeline:before {
   position: absolute;
   left: 50%;
   width: 2px;
@@ -72,7 +35,11 @@
   content: "";
   background: rgba(255, 255, 255, 0.07);
 }
-
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
 .timeline-item {
   padding: 40px 0;
   opacity: 0.3;
@@ -124,15 +91,7 @@
 .timeline-item--active .timeline__content-title {
   margin: -50px 0 20px 0;
 }
-
-.timeline__img {
-  max-width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-}
-
-
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .timeline-item {
     align-self: baseline !important;
     width: 100%;
@@ -149,189 +108,56 @@
   .timeline-item:last-child {
     padding-bottom: 40px;
   }
-  .timeline:before {
-    left: 40px;
-  }
 }
-
-
-
-
-/* footer */
-footer{
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+.timeline-container {
   width: 100%;
   position: relative;
-  bottom: 0;
-  background: #245c97;
-  color: #fff;
-  padding: 40px 0 30px;
-  font-size: 13px;
-  line-height: 20px;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
-.fot-row{
-  width: 85%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.fot-col{
-  flex-basis: 25%;
-  padding: 10px;
-}
-.fot-col:nth-child(2), .fot-col:nth-child(3){
-  flex-basis: 15%;
-}
-.fot-col .logo-container {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center items vertically */
-}
-.logo{
-  width: 100px;
-  margin-bottom: 30px;
-  margin-right: 10px;
-}
-.fot-col .logo-container h6{
-  color: #fff; /* Change the text color */
-  font-family: "Kanit", sans-serif; /* Use the same font */
-  font-weight: 600; /* Adjust font weight */
-  font-size: 40px; /* Adjust font size as needed */
-}
-.fot-col h3{
-  width: fit-content;
-  margin-bottom: 40px;
-  position: relative;
-}
-.fot-col a{
-  text-decoration: none;
-  color: #fff;
-}
-.fot-col a:hover{
-  text-decoration: underline;
-}
-
-.fot-col h5{
-  font-family: "Kanit", sans-serif;
-  font-weight: 600;
-  font-size: 25px;
-}
-.email{
-  width: fit-content;
-  margin: 20px 0;
-}
-.fot-col ul{
-  padding-left: 0%;
-}
-.fot-col ul li{
-  list-style: none;
-  margin-bottom: 12px;
-}
-ul li a{
-  text-decoration: none;
-  color: #fff;
-}
-.fot-col form{
-  padding-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid#fff;
-  margin-bottom: 50px;
-}
-.fot-col .inputBox {
-  position: relative;
-  width: 100%;
-  margin-top: 20px; /* Adjust as needed */
-}
-.fot-col form .inputBox input{
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  background: transparent;
-  color: #fff;
-  outline: none;
-  resize: none;
-  font-size: 15px;
-}
-.fot-col .inputBox span {
+.timeline-container:before {
   position: absolute;
   left: 0;
-  pointer-events: none;
-  padding: 5px 0;
-  margin: 10px 0;
-  color: #fff; /* Placeholder color */
-  transition: 0.5s;
-  font-family: "Kanit";
-  font-weight: 400;
-  font-size: 25px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(99, 99, 99, 0.8);
+  content: "";
 }
-.fot-col form .inputBox input:focus ~ span,
-.fot-col form .inputBox input:valid ~ span{
-  color: #A1E3F8;
-  font-size: 20px;
-  transform: translateY(-24px);
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
 }
-.fot-col form .sub-btn{
-  width: 100px;
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
-  display: inline-block;
-  background: transparent;
-  border: 2px solid #A1E3F8;
-  border-radius: 40px;
-  box-shadow: 0 0 10px #A1E3F8;
-  text-decoration: none;
-}
-
-.fot-col form .sub-btn:hover{
-  background-color: #fff;
-  color: #000000;
-  box-shadow: 0 0 10px #D1F8EF;
-}
-input::placeholder{
+.timeline-header__title {
   color: #fff;
-  font-family: "Kanit", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  font-size: 46px;
+  font-family: Cardo;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
 }
 
-hr{
-  width: 90%;
-  border: 0;
-  border-bottom: 1px solid#ccc;
-  margin: 20px auto;
-}
-.copyRight{
+.demo-footer {
+  padding: 60px 0;
   text-align: center;
 }
-
-.line{
-  width: 100%;
-  height: 5px;
-  background: #061b3c;
-  border-radius: 3px;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  overflow: hidden;
-}
-.line span{
-  width: 15px;
-  height: 100%;
-  background: #D1F8EF;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  animation: moving 2s linear infinite;
-}
-@keyframes moving{
-  0%{
-      left: -20px;
-  }
-  100%{
-      left: 100%;
-  }
+.demo-footer a {
+  color: #999;
+  display: inline-block;
+  font-family: Cardo;
 }
