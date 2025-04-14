@@ -49,4 +49,3 @@ document.addEventListener("DOMContentLoaded", function () {
       timeline(timelineElement);
   }
 });
-

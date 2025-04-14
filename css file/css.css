@@ -1061,12 +1061,12 @@ hr{
     margin: 0 auto;
     flex-wrap: wrap;
     flex-direction: column;
-    max-width: 700px;
+    max-width: 80%;
     position: relative;
   }
   .timeline-content-date { /*date title*/
     font-family: "Kanit";
-    font-weight: 500;
+    font-weight: 600;
     font-size: 50px;
     font-style: italic;
     color: #ffffff;
@@ -1075,17 +1075,18 @@ hr{
     padding: 0 10px;
     box-sizing: border-box;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-color: #061b3c;
   }
   .timeline-content-text {
     margin: 0;
     box-sizing: border-box;
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 20x;
+    font-size: 22px;
     color: #ffffff;
     line-height: 25px;
   }
+  
   .timeline:before { /* line */
     position: absolute;
     left: 50%;
@@ -1107,15 +1108,16 @@ hr{
     position: relative;
     transform: translateY(-80px);
   }
-  .timeline-box:before { /*novel chapter name*/
+  .timeline-box:before { /*novel chapter name--data-text*/
     content: attr(data-text);
     letter-spacing: 3px;
     width: 100%;
     position: absolute;
-    color: rgba(255, 255, 255, 0.74);
-    font-size: 13px;
-    font-family: "Pathway Gothic One", sans-serif;
-    border-left: 2px solid rgba(255, 255, 255, 0.74);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 18px;
+    border-left: 2px solid rgba(255, 255, 255, 0.8);
     top: 70%;
     margin-top: -5px;
     padding-left: 15px;
@@ -1131,7 +1133,7 @@ hr{
     left: calc(-100% - 56px);
     padding-left: 0;
     border-left: none;
-    border-right: 2px solid rgba(255, 255, 255, 0.74);
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
     padding-right: 15px;
   }
   .timeline-box--active {
@@ -1159,14 +1161,14 @@ hr{
   }
   
   @media only screen and (max-width: 768px) {
-    .timeline-container{
+    /* .timeline-container{
         padding: 50px;
-    }
+    } */
     .timeline-header {
         margin-bottom: 10px;
     }
     .timeline:before {
-      left: 40px;
+      left: 0px;
     }
     .timeline-box {
         align-self: baseline !important;
@@ -1177,9 +1179,12 @@ hr{
         left: 10px !important;
         padding: 0 !important;
         top: 50px;
-        text-align: center !important;
+        text-align: left !important;
         width: 60px;
+        font-size: 20px;
         border: none !important;
+        -webkit-text-stroke-width: 0.4px;
+        -webkit-text-stroke-color: #000000;
       }
       .timeline-box:last-child {
         padding-bottom: 40px;
@@ -1188,4 +1193,4 @@ hr{
         display: none;
       }
   }
-  
+ 
