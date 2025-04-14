@@ -1066,7 +1066,7 @@ hr{
   }
   .timeline-content-date { /*date title*/
     font-family: "Kanit";
-    font-weight: 300;
+    font-weight: 500;
     font-size: 50px;
     font-style: italic;
     color: #ffffff;
@@ -1080,7 +1080,7 @@ hr{
     box-sizing: border-box;
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 15px;
+    font-size: 20x;
     color: #ffffff;
     line-height: 25px;
   }
