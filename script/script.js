@@ -85,5 +85,20 @@ cards.forEach(card => {
     };
 });
 
-
+function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll
+    });
+  }
+  
+  // Show button when scrolling down
+  window.onscroll = function() {
+    const button = document.getElementById('scrollToTop');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      button.style.display = 'block'; // Show button
+    } else {
+      button.style.display = 'none'; // Hide button
+    }
+  };
 

@@ -885,22 +885,23 @@ hr{
     box-shadow: 0 0 10px #D1F8EF;
 }
 #scrollToTop {
-    display: none; /* Initially hidden */
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding for size */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth background color transition */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff0000; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
 }
-  
+
 #scrollToTop:hover {
-    background-color: #0056b3; /* Darker color on hover */
+  background-color: #ff5050; /* Hover color */
 }
   
 @media(max-width: 768px){
@@ -1616,65 +1617,50 @@ hr{
 .timeline-content a{
     text-decoration: none;
 }
-  button .yt-button {
-    font-family: "Kanit";
-    font-weight: 600;
-    font-size: 18px;
-    background: linear-gradient(to bottom, #ff0000 0%, #ff5050 100%);
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
-  }
-  
-  button .yt-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  button .yt-button:active {
-    transform: scale(0.95);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  button .yt-button span {
-    display: block;
-    margin-left: 0.4em;
-    transition: all 0.3s;
-  }
-  
-  button .yt-button svg {
-    width: 18px;
-    height: 18px;
-    fill: white;
-    transition: all 0.3s;
-  }
-  
-  button .yt-button .yt-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-right: 0.5em;
-    transition: all 0.3s;
-  }
-  
-  button .yt-button:hover .yt-logo {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  
-  button .yt-button:hover svg {
-    transform: rotate(45deg);
-  }
+
+button.yt-button {
+  font-family: "Kanit";
+  font-weight: 500;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #ff0000 0%, #ff5050 100%);
+  color: white;
+  margin-top: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button.yt-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button.yt-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button.yt-button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button.yt-button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button.yt-button:hover svg {
+  transform: rotate(45deg);
+}
 
 .inf-title{ /*modal title*/
     color: #fff;
