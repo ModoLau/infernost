@@ -13,7 +13,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6LC2Pp5W5wG5g1h6bX7B9F9Ff7w3k4/4z6Fz1" crossorigin="anonymous"></script>
   <script src="../../script/timeline.js" defer></script>
-
 </head>
 <body>
   <div class="timeline-container" id="timeline-1">
@@ -79,6 +78,7 @@
                 <p class="timeline-content-text">
                   <em><strong>Modo's Inner Monologue</strong></em><br>
                   Back then... primary 5 years was the darkest time of my life. That exchange program changed my life forever.</p>
+                  <button type="button" class="story-inf-button mem-btn" data-bs-toggle="modal" data-bs-target="#myMemory"><b><span>My memory</span></b></button>
               </div>
             </div>
       
@@ -404,41 +404,28 @@
   <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 inf-title" id="mrYeungLabel">Mr. Yeung</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5 inf-title" id="mrYeungLabel">Mr. Yeung</h1> <!--modal title-->
+        <button type="button" class="btn-close close-x-btn" data-bs-dismiss="modal" aria-label="Close"></button> <!--X close button-->
       </div>
       <div class="modal-body">
         <div class="container">
-          <div class="row">
+          <div class="row character-row"> <!--img and intro(name and position)-->
             <div class="col character-draw-box"><img src="../../image/character/mryeung.png" class="character-illustration" alt="Mr.Yeung Character Illustration"></div>
             <div class="col character-intro">
+              <div class="character-intro-text">
+                <h1>Mr.Yeung (M)</h1>
+                <h2>Position: </h2>
+                <h3>Second-in-Charge of the ITP Team</h3>
+
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="story-close-button" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="modal fade" id="msLai" tabindex="-1" aria-labelledby="msLaiLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 inf-title" id="msLaiLabel">Ms. Lai</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col character-draw-box"><img src="../../image/character/mslai.png" class="character-illustration" alt="Ms.Lai Character Illustration"></div>
+          <div class="row character-row"> <!--character introduction-->
             <div class="col character-intro">
               <div class="character-intro-text">
-                <h1>Mandy Lai (F)</h1>
-                <h2>Position: Modo’s ICT teacher & Leader of the ITP team</h2>
-                <p>Intro: Three years ago, the entire ITP was handed over to Mr. Yeung, which led to a decline in the team’s performance. 
+                <h2>Introoduction</h2>
+                <p>Three years ago, the entire ITP was handed over to Mr. Yeung, which led to a decline in the team’s performance. 
                   After Sunny's incident was exposed, she took back control of the team and initiated reforms, even helping Hin retain his 
                   position amidst a flurry of rumors. Before becoming a teacher, she worked as a researcher, so she is used to wearing a white
                   lab coat every day. She often carries a tablet with her. She is very friendly towards both students and teachers, always displaying a smile to everyone.</p>
@@ -446,15 +433,135 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="story-close-button" data-bs-dismiss="modal">Close</button>
+        
+        <div class="modal-footer"> <!--close button-->
+          <button type="button" class="story-close-button" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="msLai" tabindex="-1" aria-labelledby="msLaiLabel" aria-hidden="true"> <!--Ms Lai information modal-->
+  <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 inf-title" id="msLaiLabel">Ms. Lai Mandy</h1> <!--modal title-->
+        <button type="button" class="btn-close close-x-btn" data-bs-dismiss="modal" aria-label="Close"></button> <!--X close button-->
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row character-row"> <!--img and intro(name and position)-->
+            <div class="col character-draw-box"><img src="../../image/character/mslai.png" class="character-illustration" alt="Ms.Lai Character Illustration"></div>
+            <div class="col character-intro">
+              <div class="character-intro-text">
+                <h1>Mandy Lai (F)</h1>
+                <h2>Position: </h2>
+                <h3> Modo’s ICT teacher & <br> Leader of the ITP team</h3>
 
+              </div>
+            </div>
+          </div>
+
+          <div class="row character-row"> <!--character introduction-->
+            <div class="col character-intro">
+              <div class="character-intro-text">
+                <h2>Introoduction</h2>
+                <p>Three years ago, the entire ITP was handed over to Mr. Yeung, which led to a decline in the team’s performance. 
+                  After Sunny's incident was exposed, she took back control of the team and initiated reforms, even helping Hin retain his 
+                  position amidst a flurry of rumors. Before becoming a teacher, she worked as a researcher, so she is used to wearing a white
+                  lab coat every day. She often carries a tablet with her. She is very friendly towards both students and teachers, always displaying a smile to everyone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer"> <!--close button-->
+          <button type="button" class="story-close-button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="my-memory">
+  <div class="modal fade" id="myMemory" aria-hidden="true" aria-labelledby="myMemoryLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered custom-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 inf-title" id="myMemoryLabel">My Memory - 2017/04/01</h1>
+          <button type="button" class="btn-close close-x-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mem-content">
+          <p>On the third day of the program, we went to the supermarket with our teachers to buy food.
+            Naturally, I wanted to buy some snacks. At dinner time, when the teacher found out I had bought 
+            some treats, she suddenly threatened me, saying, "If I find out you bought unnecessary things,
+            I’ll take them all away and only return them on the day we go back to Hong Kong." I felt she wasn’t 
+            joking, but the problem was that other classmates had bought snacks too—why was I the only one being 
+            scolded? That night, unexpectedly, the three teachers in charge of the exchange program burst into my 
+            room and took away another classmate, forcing me to face their questioning alone. They demanded I unpack
+            my luggage for inspection and even coerced me into calling my family to falsely accuse me. I felt
+            utterly helpless and could only apologize to them, feeling very wronged. When I mentioned a souvenir 
+            I bought for my cousin, they immediately laughed at his name, believing I was lying. I managed to get through that day “safely.”</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary mem-next-btn" data-bs-target="#myMemory2" data-bs-toggle="modal">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myMemory2" aria-hidden="true" aria-labelledby="myMemoryLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered custom-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 inf-title" id="myMemoryLabel2">My Memory - 2017/04/03</h1>
+          <button type="button" class="btn-close close-x-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mem-content">
+          <p>However, on the last day of the program, we went to the local supermarket one last time to buy 
+            souvenirs. I was just short of money to buy a box of snacks, and since there had been no mention
+            of borrowing money during the program preparation meetings, I borrowed from my best friend. She
+              agreed, but as soon as those three teachers saw me talking to someone else, they rushed over,
+              grabbed my arm tightly, and forced me to look at her while answering her questions. I was 
+              terrified and stammered my responses, ultimately saying one wrong thing. That was enough for 
+              her to accuse me of lying. She even whispered in my ear, "If you lie again, I’ll tell all the 
+              teachers and students at the school about your deceit." At that moment, over 40 classmates were 
+              curious about what was happening. In the end, I could only wrongly “admit” to lying, which seemed 
+              to satisfy them. When it came time to pay, as I took out my money, they loudly exclaimed,
+              “Looks like someone doesn’t have enough money!”</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary mem-next-btn" data-bs-target="#myMemory3" data-bs-toggle="modal">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myMemory3" aria-hidden="true" aria-labelledby="myMemoryLabel3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered custom-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 inf-title" id="myMemoryLabel3">My Memory - Back to HK</h1>
+          <button type="button" class="btn-close close-x-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mem-content">
+          <p>Back at school, it was they who broke their promises.
+            A teacher who had previously been familiar with me suddenly
+              changed her attitude 180 degrees. The position of discipline 
+              captain, which was originally supposed to be mine, was suddenly
+              given to someone else. Clearly, they had informed all the teachers in the staff room about me.</p>
+          <p>Since then, I have yearned for power. I suppose I wanted to make up for the regrets of my elementary school 
+            days. So when I learned about the IT Prefect position in the first year of secondary school, I wanted to apply. 
+            However, due to grade restrictions, I had to wait until fourth year to officially pursue the dream I had in fifth grade.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="story-close-button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 

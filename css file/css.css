@@ -1236,7 +1236,7 @@ hr{
     font-size: 20px;
     transition: .3s;
     z-index: 1;
-    color: #2d3a39;
+    color: #ffffff;
    }
    
 .story-close-button::before {
@@ -1247,7 +1247,8 @@ hr{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #e94e4e;
+    background-color: #ff2142;
+    box-shadow: 0 0 10px #ff2142;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -1258,14 +1259,18 @@ hr{
 }
 
 .story-close-button:hover {
-    color: #24e4e4;
+    color: #00fff2;
+    text-shadow: 1px 1px 1px #00fff2; /* Add a subtle shadow for contrast */
 }
+
+
+
 
 .custom-modal {
     max-width: 60%; /* Set your desired width */
 }
 .modal-content{
-   background-color: #fff;
+   background-color: #061b3c;
 }
 .modal-header{
     border: 0;
@@ -1277,18 +1282,123 @@ hr{
 .modal-footer{
     border: 0;
 }
-.inf-title{
+
+.close-x-btn{
+    margin-right: 10px !important;
+    background-color: #ff2142;
+    border: 2px solid #ff2142;
+    box-shadow: 0 0 10px #ff2142;
+}
+
+.close-x-btn:hover{
+    color: #ff0c30;
+}
+.mem-content p{
+    padding: 30px;
+    color: #fff;
+    font-family: "Kanit" ;
+    font-weight: 400;
+    font-size: 20px;
+}
+.mem-next-btn,
+.mem-next-btn::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.mem-next-btn::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "HOVER ME"; /* Text displayed on button */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.mem-next-btn:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+.inf-title{ /*modal title*/
+    color: #fff;
     margin-left: 15px;
+    margin-top: 10px;
     font-family: "Kanit" ;
     font-weight: 700;
     font-size: 30px !important;
 }
 .character-intro{
     margin: 20px;
-    padding: 50px;
+    padding: 40px;
     position: relative;
     width: 40%;
-    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+    background: repeating-conic-gradient(from var(--a), #24e4e4 0%,#24e4e4 10%, transparent 10%,transparent 50%); /*line color*/
     animation: animate 6s linear infinite;
     display: flex;               /* Enable flexbox */
     flex-direction: column;  
@@ -1302,8 +1412,14 @@ hr{
 }
 .character-intro-text h2{
     font-family: "Kanit" ;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
+    padding-top: 20px;
+}
+.character-intro-text h3{
+    font-family: "Kanit" ;
+    font-weight: 400;
+    font-size: 25px;
 }
 .character-intro-text p{
     font-family: "Kanit" ;
@@ -1314,7 +1430,7 @@ hr{
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+    background: repeating-conic-gradient(from var(--a), #24e4e4 0%,#24e4e4 10%, transparent 10%,transparent 50%);
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
 }
@@ -1322,47 +1438,31 @@ hr{
     content: '';
     position: absolute;
     inset: 2px;
-    border: 20px solid #ffffff;
-    background: #578FCA;
+    border: 20px solid #061b3c; /*need same with modal-content bg-color*/
+    background: #061b3c;
 }
 .character-intro-text{
+    color: #fff;
     z-index: 10;
 }
 .character-illustration{
-    width: 100%;
-    height: 100%;
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Maintains the aspect ratio */
 }
-
-.character-draw-box{
+.mem-text{
+    margin: 15px;
+}
+ .character-draw-box{
     position: relative;
     width: 40%;
-    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
-    animation: animate 6s linear infinite;
-    padding: 60px;
-    display: flex;               /* Enable flexbox */
-    flex-direction: column;  
-}
+    padding: 50px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures the box takes full height */         
+} 
 
-.character-draw-box img::before{
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
-    animation: animate 6s linear infinite;
-    animation-delay: -1.5s;
-}
-.character-draw-box img::after{
-    content: '';
-    position: absolute;
-    inset: 2px;
-    border: 20px solid #061b3c;
-    background: #578FCA;
-}
-  
   @media only screen and (max-width: 768px) {
-    /* .timeline-container{
-        padding: 50px;
-    } */
     .timeline-header {
         margin-bottom: 10px;
     }
@@ -1390,6 +1490,13 @@ hr{
       }
       .nav-story{
         display: none;
+      }
+      .character-draw-box, .character-intro {
+        flex: 0 0 100%; /* Stack on smaller screens */
+        max-width: 100%;
+      }
+      .character-row{
+        margin-right: 22px;
       }
   }
  
