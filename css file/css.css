@@ -62,7 +62,7 @@ nav a{
 .nav-link ul li a{
     color: #fff;
     text-decoration: none;
-    font-family: "Kanit", sans-serif;
+    font-family: "Kanit";
     font-weight: 600;
     font-size: 25px;
 }
@@ -115,25 +115,34 @@ nav a{
     font-size: 24px;
 }
 
-.about-button{
-    display: inline-block;
-    text-decoration: none;
-    color: #A1E3F8;
-    border: 1px solid #D1F8EF;
-    padding: 12px 34px;
-    font-family: "Kanit", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
+.about-button {
+  text-decoration: none;
+  --main-color: rgb(255, 255, 255);
+  --main-bg-color: rgba(0, 204, 255, 0.36);
+  --pattern-color: rgba(0, 204, 255, 0.073);
+  filter: hue-rotate(0deg);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  background: radial-gradient(circle,var(--main-bg-color) 0%,rgba(0, 0, 0, 0) 95%),linear-gradient(var(--pattern-color) 1px, transparent 1px),linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size:cover,15px 15px,15px 15px;
+  background-position:center center,center center,center center;
+  border-image: radial-gradient(circle,var(--main-color) 0%,rgba(0, 0, 0, 0) 100%)1;
+  border-width: 1px 0 1px 0;
+  color: var(--main-color);
+  padding: 1rem 3rem;
+  font-family: "Kanit";
+  font-weight: 700;
+  font-size: 26px;
+  transition: background-size 0.2s ease-in-out;
 }
 
-.about-button:hover{
-    border: 1px solid #3674B5;
-    background-color: #A1E3F9;
-    transition: 0.7s;
-    color: #061b3c;
+.about-button:hover {
+  background-size:cover,10px 10px,10px 10px;
+}
+
+.about-button:active {
+  filter: brightness(10) hue-rotate(50deg);
 }
 
 nav .close-button, .menu-bar{
@@ -210,7 +219,7 @@ nav .close-button, .menu-bar{
     box-shadow: 0 0 10px #D1F8EF;
 }
 
-.about-me .socailIcon .know-more-button{
+.socailIcon .know-more-button{
     display: inline-block;
     padding: 10px 30px;
     background: transparent;
@@ -223,7 +232,7 @@ nav .close-button, .menu-bar{
     text-decoration: none;
 }
 
-.about-me .socailIcon .know-more-button:hover{
+.socailIcon .know-more-button:hover{
     background-color: #fff;
     color: #000000;
     box-shadow: 0 0 10px #D1F8EF;
@@ -886,22 +895,24 @@ hr{
 }
 #scrollToTop {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #ff0000; /* Button color */
+  bottom: 30px;
+  right: 30px;
+  background-color: #061b3c; /* Button color */
   color: white;
-  border: none;
-  border-radius: 50%;
+  border: 2px solid #578FCA;
+  border-radius: 10px;
   width: 50px;
   height: 50px;
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
+  z-index: 100;
 }
 
 #scrollToTop:hover {
-  background-color: #ff5050; /* Hover color */
+  background-color: #687EFF; /* Hover color */
+  color: #000;
 }
   
 @media(max-width: 768px){
@@ -1151,7 +1162,7 @@ hr{
   .timeline-box--active .timeline-content-date {
     margin: -50px 0 20px 0;
   }
-  
+
   .timeline-img {
     max-width: 100%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
@@ -1767,6 +1778,11 @@ button.yt-button:hover svg {
     align-items: center;
     height: 100%; /* Ensures the box takes full height */         
 } 
+
+.john{
+  color: #00fdfd;
+}
+
 
   @media only screen and (max-width: 768px) {
     .timeline-header {
