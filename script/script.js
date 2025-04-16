@@ -7,64 +7,63 @@ function hideMenu(){
     navLink.style.right = "-200px";
 }
 
-const typewriter = document.getElementById('typewriter');
-const fullText = "I am a School Head IT Prefect";
-let hasTyped = false;
-let intervalId;
+// The typewriter element
+var typeWriterElement = document.getElementById('typewriter');
 
-function typeText() {
-    let index = 0;
+// The TextArray: 
+var textArray = ["I was an IT Prefect Trainee in Form 4","I was the IT Form Head Prefect in Form 5", "I was the IT School Head Prefect in Form 6", "I am the author of the ITP Survival Diary"];
 
-    // 清除现有文本
-    typewriter.textContent = '';
+// You can also do this by transfering it through a data-attribute
+// var textArray = typeWriterElement.getAttribute('data-array');
 
-    intervalId = setInterval(() => {
-        if (index < fullText.length) {
-            typewriter.textContent += fullText.charAt(index);
-            index++;
-        } else {
-            clearInterval(intervalId);
-            hasTyped = true; // 设置为已打字完成
-        }
-    }, 100); // 调整打字速度
-}
 
-function reverseText() {
-    let index = typewriter.textContent.length;
+// function to generate the backspace effect 
+function delWriter(text, i, cb) {
+	if (i >= 0 ) {
+		typeWriterElement.innerHTML = text.substring(0, i--);
+		// generate a random Number to emulate backspace hitting.
+ 		var rndBack = 10 + Math.random() * 100;
+		setTimeout(function() {
+			delWriter(text, i, cb);
+		},rndBack); 
+	} else if (typeof cb == 'function') {
+		setTimeout(cb,1000);
+	}
+};
 
-    intervalId = setInterval(() => {
-        if (index > 0) {
-            typewriter.textContent = typewriter.textContent.slice(0, index - 1); // 移除最后一个字符
-            index--;
-        } else {
-            clearInterval(intervalId);
-            hasTyped = false; // 重置状态以便再次触发打字
-        }
-    }, 50); // 调整反向速度
-}
+// function to generate the keyhitting effect
+function typeWriter(text, i, cb) {
+	if ( i < text.length+1 ) {
+		typeWriterElement.innerHTML = text.substring(0, i++);
+		// generate a random Number to emulate Typing on the Keyboard.
+		var rndTyping = 250 - Math.random() * 100;
+		setTimeout( function () { 
+			typeWriter(text, i++, cb)
+		},rndTyping);
+	} else if (i === text.length+1) {
+		setTimeout( function () {
+			delWriter(text, i, cb)
+		},1000);
+	}
+};
 
-// 创建一个 Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !hasTyped) {
-            typeText(); // 当元素在视口内时触发打字
-        } else if (!entry.isIntersecting && hasTyped) {
-            reverseText(); // 离开视口时触发反向打字
-        }
-    });
-});
-
-// 观察目标元素
-observer.observe(typewriter);
-
-// 监听页面滚动事件
-window.addEventListener('scroll', () => {
-    if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-        // 当用户滚动到页面底部时，清除文本
-        typewriter.textContent = '';
-        hasTyped = false; // 重置状态
-    }
-});
+// the main writer function
+function StartWriter(i) {
+	if (typeof textArray[i] == "undefined") {
+		setTimeout( function () {
+			StartWriter(0)
+		},1000);
+	} else if(i < textArray[i].length+1) {
+		typeWriter(textArray[i], 0, function (){
+			StartWriter(i+1);
+		});
+	}  
+};
+// wait one second then start the typewriter
+setTimeout( function () {
+	StartWriter(0);
+},1000);
+	
 
 
 
