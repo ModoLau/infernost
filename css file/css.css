@@ -1296,6 +1296,7 @@ hr{
     font-family: "Kanit" ;
     font-weight: 400;
     font-size: 20px;
+    line-height: 35px;
 }
 .mem-next-btn,
 .mem-next-btn::after {
@@ -1765,6 +1766,7 @@ button.yt-button:hover svg {
     height: 100%; /* Ensures the box takes full height */         
 } 
 
+/*My Story special font design*/
 .john{
   color: #00fdfd;
 }
@@ -1772,8 +1774,17 @@ button.yt-button:hover svg {
   font-weight: 600;
   color: #ff3232;
 }
-
+.camera{
+  color: #1DCD9F;
+}
+.mem-scene{
+  color: #ff3232;
+}
+.reason{
+  color: #00b7ff;
+}
 .modo-feeling{
+  line-height: 33px;
   letter-spacing: 1px;
   font-size: 25px;
   font-weight: 700;
@@ -1782,6 +1793,31 @@ button.yt-button:hover svg {
               1px -1px 0 #a7a7a7,
               -1px 1px 0 #a7a7a7,
               1px 1px 0 #a7a7a7;
+}
+.modo-experience{
+  color: #955cff;
+}
+
+.itpt{
+  color: #00b7ff;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+.itpfh{
+  color: #8b5b00;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+.itpsh{
+  color: #fbff00;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
   @media only screen and (max-width: 768px) {
