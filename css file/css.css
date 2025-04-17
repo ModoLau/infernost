@@ -7,10 +7,10 @@
 }
 
 body {
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; /* prevent horizontal scroll */
 }
 
-.header-index{
+.header-index{ /*index page first part (full page)*/
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/bg-index.png);
@@ -19,14 +19,12 @@ body {
     position: relative;
 }
 
-.header-contact{
+.header-contact{ /*Contact Me page (full page)*/
     min-height: auto;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/bg-contact.jpg);
 }
-.header-story{
-    min-height: auto;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/bg-contact.jpg);
-}
+
+/*Navigation Bar Setting*/
 nav{
     display: flex;
     padding: 2% 6%;
@@ -34,12 +32,12 @@ nav{
     align-items: center;
 }
 
-nav img{
+nav img{ /*nav logo setting*/
     width: 150px;
     margin-right: 20px;
 }
 
-nav a{
+nav a{ /*Inferno Studio title*/
     text-decoration: none;
     font-family: "Kanit";
     font-weight: 600;
@@ -231,7 +229,7 @@ nav .close-button, .menu-bar{
 .about-me-img .img-box {
     position: relative;
     width: 80%; /* Use a percentage to make it responsive */
-    max-width: 700px; /* Set a box size */
+    max-width: 600px; /* Set a box size */
     aspect-ratio: 1; /* Maintain a square aspect ratio */
     border-radius: 50%;
     padding: 5px;
@@ -245,8 +243,8 @@ nav .close-button, .menu-bar{
 .about-me-img .img-box::after{ /* effect */
     content: '';
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 600px; /* Set a img size  (need sam with box size)*/
+    height: 600px; /* Set a img size (need sam with box size)*/
     background: conic-gradient(transparent, transparent, transparent, #D1F8EF);
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
@@ -1783,7 +1781,7 @@ button.yt-button:hover svg {
 .reason{
   color: #00b7ff;
 }
-.modo-feeling{
+/*.modo-feeling{
   line-height: 33px;
   letter-spacing: 1px;
   font-size: 25px;
@@ -1793,8 +1791,9 @@ button.yt-button:hover svg {
               1px -1px 0 #a7a7a7,
               -1px 1px 0 #a7a7a7,
               1px 1px 0 #a7a7a7;
-}
-.modo-experience{
+}*/
+.modo-experience,
+.modo-feeling{
   color: #955cff;
 }
 
