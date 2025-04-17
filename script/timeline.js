@@ -1,3 +1,4 @@
+//Navigation Bar function
 var navLink = document.getElementById("navLink");
 
 function showMenu(){
@@ -7,6 +8,7 @@ function hideMenu(){
     navLink.style.right = "-200px";
 }
 
+//timeline setting
 document.addEventListener("DOMContentLoaded", function () {
   function timeline(element) {
       const selectors = {
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//Scroll To Top Button
 function scrollToTop() {
     window.scrollTo({
       top: 0,

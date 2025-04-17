@@ -10,6 +10,7 @@ body {
     overflow-x: hidden; /* prevent horizontal scroll */
 }
 
+/*index Part*/
 .header-index{ /*index page first part (full page)*/
     min-height: 100vh;
     width: 100%;
@@ -571,7 +572,6 @@ ul li a{
     box-shadow: 0 0 10px #A1E3F8;
     text-decoration: none;
 }
-
 .fot-col form .sub-btn:hover{
     background-color: #fff;
     color: #000000;
@@ -583,7 +583,6 @@ input::placeholder{
     font-weight: 300;
     font-size: 18px;
 }
-
 hr{
     width: 90%;
     border: 0;
@@ -593,7 +592,6 @@ hr{
 .copyRight{
     text-align: center;
 }
-
 .line{
     width: 100%;
     height: 5px;
@@ -624,7 +622,7 @@ hr{
 }
 
 
-
+/*Contact Me Page*/
 .contact{
     min-height: 100vh;
     background-position: center;
@@ -635,23 +633,20 @@ hr{
     align-items: center;
     flex-direction: column;
 }
-
 .contact-intro{
     max-width: 900px;
     text-align: left;
 }
-
 .contact-intro h3{
     font-family: "Kanit";
     font-weight: 700;
     font-size: 70px;
     color: #fff;
 }
-
 .contact-intro p{
     font-family: "Kanit";
     font-weight: 400;
-    font-size: 18px;
+    font-size: 19px;
     color: #fff;
 }
 .information{
@@ -696,7 +691,6 @@ hr{
     inset: 2px;
     background: #061b3c;
 }
-
 .information .contactInfo .box .icon b{
     position: absolute;
     inset: 8px;
@@ -746,15 +740,15 @@ hr{
     position: relative;
     padding-left: 50px;
 }
-
+/*contactForm setting and effect*/
 .information .contactForm{
     position: relative;
     width: 40%;
     background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
     animation: animate 6s linear infinite;
     padding: 60px;
-    display: flex;               /* Enable flexbox */
-    flex-direction: column;      /* Arrange items in a column */
+    display: flex;              
+    flex-direction: column;    
 }
 @property --a{
     syntax: '<angle>';
@@ -787,12 +781,12 @@ hr{
 .information .contactForm form{
     position: relative;
     z-index: 10;
-    display: flex;               /* Enable flexbox for the form */
-    flex-direction: column;      /* Arrange inputs in a column */
+    display: flex;               
+    flex-direction: column;   
 }
 .information .contactForm form .inputBox:last-child {
-    display: flex;               /* Enable flexbox for the last input box */
-    justify-content: flex-end;   /* Align the button to the right */
+    display: flex;               
+    justify-content: flex-end; 
 }
 .information .contactForm form h2{
     font-family: "Kanit";
@@ -856,6 +850,8 @@ hr{
     color: #000000;
     box-shadow: 0 0 10px #D1F8EF;
 }
+
+/*Scroll to Top button*/
 #scrollToTop {
   position: fixed;
   bottom: 30px;
@@ -872,129 +868,12 @@ hr{
   transition: background-color 0.3s;
   z-index: 100;
 }
-
 #scrollToTop:hover {
   background-color: #687EFF; /* Hover color */
   color: #000;
 }
-  
-@media(max-width: 768px){
-    .intro h1{
-        font-family: "Kanit", sans-serif;
-        font-weight: 700;
-        font-size: 40px;
-    }
-    nav img{
-        width: 100px;
-    }
-    nav a{
-        font-size: 30px;
-    }
-    .nav-link ul{
-        padding: 30px;
-    }
-    .nav-link ul li{
-        display: block;
-    }
-    .nav-link{
-        position: absolute;
-        background: #061b3c;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.7s;
-    }
-    nav .close-button, .menu-bar{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-        width: 30px;
-        z-index: 1;
-    }
-    .content {
-        flex-direction: column-reverse; /* Stack items vertically */
-        align-items: center; /* Center align items */
-        padding: 5rem; /* Adjust padding for mobile */
-    }
 
-    .about-me-img {
-        margin-right: 0; /* Reset margin */
-        margin-bottom: 20px; /* Space below image */
-    }
-
-    .img-box {
-        max-width: 80%;
-        width: 30rem;
-        height: 30rem;
-        margin: 35px;
-    }
-
-    .about-me {
-        align-items: center;
-        text-align: center; /* Center text on small screens */
-    }
-
-    .about-me h1 {
-        font-size: 34px; /* Adjust font size for mobile */
-    }
-
-    .about-me h2 {
-        align-items: center;
-        font-size: 20px; /* Adjust font size for mobile */
-    }
-
-    .about-me p {
-        align-items: center;
-        font-size: 15px; /* Adjust font size for mobile */
-    }
-    .text-content .typewriter{
-        font-size: 20px;
-    }
-    .card {
-        height: 100%; /* 確保卡片高度相同 */
-        margin: 20px;
-    }
-    .ITP-intro{
-        height: 100%;
-    }
-    footer{
-        bottom: unset;
-    }
-    .fot-col{
-        flex-basis: 100%;
-    }
-    .fot-col:nth-child(2), .fot-col:nth-child(3){
-        flex-basis: 100%;
-    }
-    .contact{
-        padding: 50px;
-    }
-    .information{
-        flex-direction: column;
-        padding: 20px;
-    }
-    .information .contactInfo,
-    .information .contactForm{
-        width: 100%;
-    }
-    .information .contactInfo{
-      padding-left: 40px;
-    }
-    .information .contactForm{
-        padding: 40px;
-    }
-    .information .contactForm form{
-        padding: 10px;
-    }
-}
-
-
-
+/*My Story Page*/
 /*timeline*/
 .timeline-container {
     width: 100%;
@@ -1012,7 +891,7 @@ hr{
     background: linear-gradient(rgba(7, 13, 39, 0.842),rgba(7, 13, 39, 0.842));
     content: "";
   }
-  .timeline-header {
+  .timeline-header { /*Timeline Title*/
     width: 100%;
     text-align: center;
     margin-bottom: 40px;
@@ -1033,6 +912,7 @@ hr{
     letter-spacing: 5px;
     margin: 10px 0 0 0;
   }
+  /*Timeline main part*/
   .timeline {
     display: flex;
     margin: 0 auto;
@@ -1054,7 +934,7 @@ hr{
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #061b3c;
   }
-  .timeline-content-text {
+  .timeline-content-text { /*novel content*/
     margin: 0;
     box-sizing: border-box;
     font-family: "Kanit";
@@ -1062,10 +942,8 @@ hr{
     font-size: 22px;
     color: #ffffff;
     line-height: 25px;
-
   }
-  
-  .timeline:before { /* line */
+  .timeline:before { /*line*/
     position: absolute;
     left: 50%;
     width: 2px;
@@ -1074,7 +952,7 @@ hr{
     content: "";
     background: #9c9c9c;
   }
-  
+  /*Each box in timeline*/
   .timeline-box {
     padding: 40px 0;
     opacity: 0.3;
@@ -1127,12 +1005,13 @@ hr{
   .timeline-box--active .timeline-content-date {
     margin: -50px 0 20px 0;
   }
-
+  
   .timeline-img {
     max-width: 100%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
   }
 
+  /*link to modal button*/
   .story-inf-button{
     margin-left: 5px;
     margin-top: 10px;
@@ -1144,7 +1023,6 @@ hr{
     background-color: #061b3c;
     border: none;
   }
-
   .story-inf-button b{
     position: relative;
     display: inline-block;
@@ -1156,7 +1034,6 @@ hr{
     font-weight: 600;
     font-size: 20px;
   }
-  
   .story-inf-button b::before {
     content: '';
     position: absolute;
@@ -1168,11 +1045,9 @@ hr{
     transition: 0.3s ease-in-out;
     transform: scaleY(1);
   }
-  
   .story-inf-button b:hover::before {
     transform: scaleY(0);
   }
-  
   .story-inf-button b::after {
     content: '';
     position: absolute;
@@ -1185,21 +1060,19 @@ hr{
     transform: scaleX(1);
     transition-delay: 0.5s;
   }
-  
   .story-inf-button b:hover::after {
     transform: scaleX(0);
   }
-  
   .story-inf-button b span{
     position: relative;
     z-index: 3;
   }
-
   .story-inf-button b:hover{
     color: #00fdfd;
     transition: color 0.5s ease;
   }
 
+/*close modal button*/
 .story-close-button {
     padding: 5px 15px;
     border: 2px solid #061b3c;
@@ -1216,7 +1089,6 @@ hr{
     z-index: 1;
     color: #ffffff;
    }
-   
 .story-close-button::before {
     content: '';
     width: 0;
@@ -1231,18 +1103,17 @@ hr{
     display: block;
     z-index: -1;
 }
-
 .story-close-button:hover::before {
     width: 105%;
 }
-
 .story-close-button:hover {
     color: #00fff2;
 }
 
 
 
-
+/*modal setting*/
+/*common setting*/
 .custom-modal {
     max-width: 60%; /* Set your desired width */
 }
@@ -1259,17 +1130,20 @@ hr{
 .modal-footer{
     border: 0;
 }
-
+/*modal 'X' close button*/
 .close-x-btn{
-    margin-right: 10px !important;
+    margin-right: 20px !important;
     background-color: #ff2142;
     border: 2px solid #ff2142;
     box-shadow: 0 0 10px #ff2142;
 }
-
 .close-x-btn:hover{
     color: #ff0c30;
 }
+
+
+/*Special-My memory*/
+/*modal memory content*/
 .mem-content p{
     padding: 10px 50px;
     color: #fff;
@@ -1278,6 +1152,11 @@ hr{
     font-size: 20px;
     line-height: 35px;
 }
+.mem-text{
+  margin: 15px;
+}
+
+/*modal-Next button*/
 .mem-next-btn,
 .mem-next-btn::after {
   padding: 16px 20px;
@@ -1292,9 +1171,8 @@ hr{
   box-shadow: 6px 0px 0px #00e6f6;
   outline: transparent;
   position: relative;
-  cursor: pointer; /* Change cursor to pointer */
+  cursor: pointer;
 }
-
 .mem-next-btn::after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
@@ -1313,12 +1191,10 @@ hr{
   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);
 }
-
 .mem-next-btn:hover::after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
-
 @keyframes glitch {
   0% {
     clip-path: var(--slice-1);
@@ -1365,14 +1241,13 @@ hr{
     transform: translate(0);
   }
 }
-
+/*Link to modal button*/
 .mem-btn {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.2s ease;
     padding: 10px;
   }
-  
   .memory-button {
     position: relative;
     padding: 5px 30px;
@@ -1389,7 +1264,6 @@ hr{
     transform-style: preserve-3d;
     transition: all 0.15s ease;
   }
-  
   .effect-layers {
     position: absolute;
     top: 0;
@@ -1397,7 +1271,6 @@ hr{
     width: 100%;
     height: 100%;
   }
-  
   .effect-layer {
     position: absolute;
     top: 0;
@@ -1412,27 +1285,22 @@ hr{
     opacity: 0;
     transition: all 0.15s ease;
   }
-  
-  .layer-1 {
+  .layer-1 { /*text-Lie setting*/
     color: #001eff;
     transform-origin: center;
   }
-  
-  .layer-2 {
+  .layer-2 { /*text-PTSD setting*/
     color: #bd00ff;
     transform-origin: center;
   }
-  
   .mem-btn:hover .layer-1 {
     opacity: 1;
     animation: glitchLayer1 0.4s steps(2) infinite;
   }
-  
   .mem-btn:hover .layer-2 {
     opacity: 1;
     animation: glitchLayer2 0.4s steps(2) infinite;
   }
-  
   .mem-btn:hover .memory-button {
     animation: buttonGlitch 0.3s steps(2) infinite;
     box-shadow:
@@ -1440,7 +1308,6 @@ hr{
       0 0 30px rgba(0, 255, 255, 0.5),
       0 0 40px rgba(255, 0, 255, 0.5);
   }
-  
   .noise {
     position: absolute;
     top: -50%;
@@ -1458,11 +1325,9 @@ hr{
     transition: opacity 0.3s;
     animation: noise 0.2s steps(2) infinite;
   }
-  
   .mem-btn:hover .noise {
     opacity: 1;
   }
-  
   @keyframes buttonGlitch {
     0% {
       transform: translate(0) scale(1.1);
@@ -1480,7 +1345,6 @@ hr{
       transform: translate(0) scale(1.1);
     }
   }
-  
   @keyframes glitchLayer1 {
     0% {
       transform: translate(-20px, -10px) scale(1.1) skew(-10deg);
@@ -1503,7 +1367,6 @@ hr{
       clip-path: polygon(0 20%, 100% 20%, 100% 50%, 0 50%);
     }
   }
-  
   @keyframes glitchLayer2 {
     0% {
       transform: translate(20px, 10px) scale(1.1) skew(10deg);
@@ -1526,7 +1389,6 @@ hr{
       clip-path: polygon(0 50%, 100% 50%, 100% 80%, 0 80%);
     }
   }
-  
   @keyframes noise {
     0% {
       transform: translate(0, 0);
@@ -1562,7 +1424,6 @@ hr{
       transform: translate(0, 0);
     }
   }
-  
   .effect-slice {
     position: absolute;
     width: 120%;
@@ -1571,7 +1432,6 @@ hr{
     opacity: 0;
     animation: slice 3s linear infinite;
   }
-  
   @keyframes slice {
     0% {
       top: -10%;
@@ -1591,10 +1451,11 @@ hr{
     }
   }
 
+  /*ITP Promotion Video*/
+  /*Link to YT button*/
 .timeline-content a{
     text-decoration: none;
 }
-
 button.yt-button {
   font-family: "Kanit";
   font-weight: 500;
@@ -1611,54 +1472,50 @@ button.yt-button {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
-
 button.yt-button:hover {
   transform: translateY(-3px);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
-
 button.yt-button:active {
   transform: scale(0.95);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 button.yt-button span {
   display: block;
   margin-left: 0.4em;
   transition: all 0.3s;
 }
-
 button.yt-button svg {
   width: 18px;
   height: 18px;
   fill: white;
   transition: all 0.3s;
 }
-
 button.yt-button:hover svg {
   transform: rotate(45deg);
 }
 
+/*common modal content setting (novel character introduction)*/
 .inf-title{ /*modal title*/
     color: #fff;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 25px;
+    margin-top: 5px;
     font-family: "Kanit" ;
     font-weight: 700;
     font-size: 45px !important;
     font-style: italic;
     background: linear-gradient(to right, #B6FFFA, #98E4FF, #80B3FF, #687EFF);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Ensure text color is transparent */
+    -webkit-text-fill-color: transparent;
 }
 .character-intro{
     margin: 20px;
     padding: 40px;
     position: relative;
     width: 40%;
-    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%); /*line color*/
+    background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%); 
     animation: animate 6s linear infinite;
-    display: flex;               /* Enable flexbox */
+    display: flex;              
     flex-direction: column;  
 }
 .character-intro::before{
@@ -1677,13 +1534,14 @@ button.yt-button:hover svg {
     background: #061b3c;
 }
 
+/*character name and position*/
 .character-base-inf{
     margin: 20px;
     padding: 40px;
     position: relative;
     width: 40%;
     background: repeating-conic-gradient(from 30deg, #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
-    display: flex;               /* Enable flexbox */
+    display: flex;            
     flex-direction: column;  
 }
 .character-base-inf::before{
@@ -1699,10 +1557,8 @@ button.yt-button:hover svg {
     border: 20px solid #061b3c; /*need same with modal-content bg-color*/
     background: #061b3c;
 }
-.diagram-box{
-  display: flex;
-  justify-content: center;
-}
+
+/*character introduction text setting*/
 .character-intro-text{
     color: #fff;
     z-index: 10;
@@ -1711,7 +1567,6 @@ button.yt-button:hover svg {
     font-family: "Kanit" ;
     font-weight: 800;
     font-size: 45px;
-    
 }
 .character-intro-text h2{
     font-family: "Kanit" ;
@@ -1729,13 +1584,13 @@ button.yt-button:hover svg {
     font-weight: 400;
     font-size: 20px;
 }
+
+/*character img*/
 .character-illustration{
-    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
-    height: auto; /* Maintains the aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
-.mem-text{
-    margin: 15px;
-}
+
  .character-draw-box{
     position: relative;
     width: 40%;
@@ -1743,8 +1598,14 @@ button.yt-button:hover svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ensures the box takes full height */         
+    height: 100%;      
 } 
+
+/*ITP Team Structure modal setting*/
+.diagram-box{
+  display: flex;
+  justify-content: center;
+}
 
 /*My Story special font design*/
 .john{
@@ -1763,22 +1624,11 @@ button.yt-button:hover svg {
 .reason{
   color: #00b7ff;
 }
-/*.modo-feeling{
-  line-height: 33px;
-  letter-spacing: 1px;
-  font-size: 25px;
-  font-weight: 700;
-  color: #2d0080;
-  text-shadow: -1px -1px 0 #a7a7a7,
-              1px -1px 0 #a7a7a7,
-              -1px 1px 0 #a7a7a7,
-              1px 1px 0 #a7a7a7;
-}*/
 .modo-experience,
 .modo-feeling{
   color: #955cff;
+  font-weight: 400;
 }
-
 .itpt{
   color: #00b7ff;
   text-shadow: -1px -1px 0 #000,
@@ -1799,6 +1649,116 @@ button.yt-button:hover svg {
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
+}
+
+/*Responsive Part*/
+@media(max-width: 768px){
+  .intro h1{
+      font-family: "Kanit", sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+  }
+  nav img{
+      width: 100px;
+  }
+  nav a{
+      font-size: 30px;
+  }
+  .nav-link ul{
+      padding: 30px;
+  }
+  .nav-link ul li{
+      display: block;
+  }
+  .nav-link{
+      position: absolute;
+      background: #061b3c;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 0.7s;
+  }
+  nav .close-button, .menu-bar{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+      width: 30px;
+      z-index: 1;
+  }
+  .content {
+      flex-direction: column-reverse; 
+      align-items: center;
+      padding: 5rem;
+  }
+  .about-me-img {
+      margin-right: 0; 
+      margin-bottom: 20px; 
+  }
+  .img-box {
+      max-width: 80%;
+      width: 30rem;
+      height: 30rem;
+      margin: 35px;
+  }
+  .about-me {
+      align-items: center;
+      text-align: center; 
+  }
+  .about-me h1 {
+      font-size: 34px; 
+  }
+  .about-me h2 {
+      align-items: center;
+      font-size: 20px; 
+  }
+  .about-me p {
+      align-items: center;
+      font-size: 15px; 
+  }
+  .text-content .typewriter{
+      font-size: 20px;
+  }
+  .card {
+      height: 100%; 
+      margin: 20px;
+  }
+  .ITP-intro{
+      height: 100%;
+  }
+  footer{
+      bottom: unset;
+  }
+  .fot-col{
+      flex-basis: 100%;
+  }
+  .fot-col:nth-child(2), .fot-col:nth-child(3){
+      flex-basis: 100%;
+  }
+  .contact{
+      padding: 50px;
+  }
+  .information{
+      flex-direction: column;
+      padding: 20px;
+  }
+  .information .contactInfo,
+  .information .contactForm{
+      width: 100%;
+  }
+  .information .contactInfo{
+    padding-left: 40px;
+  }
+  .information .contactForm{
+      padding: 40px;
+  }
+  .information .contactForm form{
+      padding: 10px;
+  }
 }
 
   @media only screen and (max-width: 768px) {
@@ -1836,7 +1796,7 @@ button.yt-button:hover svg {
         display: none;
       }
       .character-draw-box, .character-intro {
-        flex: 0 0 100%; /* Stack on smaller screens */
+        flex: 0 0 100%; 
         max-width: 100%;
       }
       .character-row{

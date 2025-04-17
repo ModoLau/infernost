@@ -1,3 +1,4 @@
+//Navigation Bar function
 var navLink = document.getElementById("navLink");
 
 function showMenu(){
@@ -10,18 +11,14 @@ function hideMenu(){
 // The typewriter element
 var typeWriterElement = document.getElementById('typewriter');
 
-// The TextArray: 
+// The TextArray content: 
 var textArray = ["I was an IT Prefect Trainee in Form 4","I was the IT Form Head Prefect in Form 5", "I was the IT School Head Prefect in Form 6", "I am the author of the ITP Survival Diary"];
 
-// You can also do this by transfering it through a data-attribute
-// var textArray = typeWriterElement.getAttribute('data-array');
 
-
-// function to generate the backspace effect 
+// function to the backspace effect 
 function delWriter(text, i, cb) {
 	if (i >= 0 ) {
 		typeWriterElement.innerHTML = text.substring(0, i--);
-		// generate a random Number to emulate backspace hitting.
  		var rndBack = 10 + Math.random() * 100;
 		setTimeout(function() {
 			delWriter(text, i, cb);
@@ -31,11 +28,10 @@ function delWriter(text, i, cb) {
 	}
 };
 
-// function to generate the keyhitting effect
+// function to the keyhitting effect
 function typeWriter(text, i, cb) {
 	if ( i < text.length+1 ) {
 		typeWriterElement.innerHTML = text.substring(0, i++);
-		// generate a random Number to emulate Typing on the Keyboard.
 		var rndTyping = 250 - Math.random() * 100;
 		setTimeout( function () { 
 			typeWriter(text, i++, cb)
@@ -65,9 +61,7 @@ setTimeout( function () {
 },1000);
 	
 
-
-
-// 當 DOM 完全加載後開始監聽滾動事件
+//ITP Introduction OnMouseOver effect
 document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', onScroll);
 });
@@ -84,10 +78,13 @@ cards.forEach(card => {
     };
 });
 
+
+
+//Scroll To Top Button
 function scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Smooth scroll
+      behavior: 'smooth' 
     });
   }
   
