@@ -31,12 +31,10 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-
 nav img{ /*nav logo setting*/
     width: 150px;
     margin-right: 20px;
 }
-
 nav a{ /*Inferno Studio title*/
     text-decoration: none;
     font-family: "Kanit";
@@ -45,7 +43,6 @@ nav a{ /*Inferno Studio title*/
     color: #fff;
     z-index: 5;
 }
-
 .nav-link{
     flex: 1;
     text-align: right;
@@ -56,7 +53,6 @@ nav a{ /*Inferno Studio title*/
     padding: 8px 12px;
     position: relative;
 }
-
 .nav-link ul li a{
     color: #fff;
     text-decoration: none;
@@ -64,7 +60,6 @@ nav a{ /*Inferno Studio title*/
     font-weight: 600;
     font-size: 25px;
 }
-
 .nav-link ul li::after{
     content: '';
     width: 0%;
@@ -74,11 +69,14 @@ nav a{ /*Inferno Studio title*/
     margin: auto;
     transition: 0.5s
 }
-
 .nav-link ul li:hover::after{
     width: 100%;
 }
+nav .close-button, .menu-bar{ /*will show in screen(768px)*/
+  display: none;
+}
 
+/*index Part 1*/
 .intro {
     width: 90%;
     color: #A1E3F9;
@@ -90,29 +88,24 @@ nav a{ /*Inferno Studio title*/
     opacity: 0; /* 開始為隱藏 */
     animation: slideIn 0.7s forwards; /* 滑入動畫 */
 }
-
-
 @keyframes slideIn {
     to {
         transform: translate(-50%, -50%); /* 最終位置在中心 */
         opacity: 1; /* 完全可見 */
     }
 }
-
 .intro h1 {
     color: #fff;
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     font-size: 90px;
 }
-
 .intro p {
     margin: 10px 0 40px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
     font-size: 24px;
 }
-
 .about-button {
   text-decoration: none;
   --main-color: rgb(255, 255, 255);
@@ -134,19 +127,15 @@ nav a{ /*Inferno Studio title*/
   font-size: 26px;
   transition: background-size 0.2s ease-in-out;
 }
-
 .about-button:hover {
   background-size:cover,10px 10px,10px 10px;
 }
-
 .about-button:active {
   filter: brightness(10) hue-rotate(50deg);
 }
 
-nav .close-button, .menu-bar{
-    display: none;
-}
 
+/*index Part 2 About Me*/
 .content{
     background-color: #061b3c;
     display: flex;
@@ -166,13 +155,12 @@ nav .close-button, .menu-bar{
     font-weight: 700;
     font-size: 80px;
 }
-
 .text-content .typewriter {
     font-family: "Kanit";
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
-    border-right: 3px solid; /* Cursor effect */
-    white-space: nowrap; /* Prevent line breaks */
+    border-right: 3px solid; 
+    white-space: nowrap;
     display: inline-block;
 }
 .text-content p {
@@ -182,6 +170,7 @@ nav .close-button, .menu-bar{
     line-height: 1.8;
 }
 
+/*Social media icon and link*/
 .socailIcon a{
     display: inline-flex;
     justify-content: center;
@@ -219,6 +208,7 @@ nav .close-button, .menu-bar{
     box-shadow: 0 0 10px #D1F8EF;
 }
 
+/*Modo Photo*/
 .about-me-img {
     width: 100%; /* Ensure it takes full width */
     padding: 10%;
@@ -228,9 +218,9 @@ nav .close-button, .menu-bar{
 
 .about-me-img .img-box {
     position: relative;
-    width: 80%; /* Use a percentage to make it responsive */
+    width: 80%; 
     max-width: 600px; /* Set a box size */
-    aspect-ratio: 1; /* Maintain a square aspect ratio */
+    aspect-ratio: 1; 
     border-radius: 50%;
     padding: 5px;
     display: flex;
@@ -239,8 +229,9 @@ nav .close-button, .menu-bar{
     overflow: hidden;
 }
 
+/*rotate effect*/
 .about-me-img .img-box::before,
-.about-me-img .img-box::after{ /* effect */
+.about-me-img .img-box::after{ 
     content: '';
     position: absolute;
     width: 600px; /* Set a img size  (need sam with box size)*/
@@ -249,17 +240,14 @@ nav .close-button, .menu-bar{
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
 }
-
 .about-me-img .img-box::after{
     animation-delay: -5s;
 }
-
 @keyframes rotate-border{
     100%{
         transform: rotate(360deg);
     }
 }
-
 .about-me-img .img-box .img{
     position: relative;
     width: 100%;
@@ -272,18 +260,15 @@ nav .close-button, .menu-bar{
     z-index: 1;
     overflow: hidden;
 }
-
 .about-me-img .img-box .img img {
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the box */
+    height: auto; 
+    object-fit: cover; 
 }
-
 @keyframes rotate-border{
     100%{
         transform: rotate(360deg);
     }
 }
-
 .about-img .img-box .img-item{
     position: relative;
     width: 100%;
@@ -296,7 +281,6 @@ nav .close-button, .menu-bar{
     z-index: 1;
     overflow: hidden;
 }
-
 .about-img .img-box img{
     width: 32vh;
     border-radius: 50%;
@@ -304,13 +288,14 @@ nav .close-button, .menu-bar{
     object-fit: cover;
 }
 
+
+/*index Part 3 What is ITP?*/
 .ITP-intro{
     background-color: #061b3c;
     height: 100%;
     width: 100%;
     padding: 20px 0;
 }
-
 .ITP-intro h1{
     font-family: "Kanit";
     font-weight: 700;
@@ -339,7 +324,7 @@ nav .close-button, .menu-bar{
     background-color: #3674B5;
     color: #fff;
 }
-
+/*Card Box*/
 .card-gp{
     padding: 10px;
     margin: 30px 50px 10px;
@@ -349,12 +334,11 @@ nav .close-button, .menu-bar{
 .card-box-stage,
 .card-box-aud {
     position: relative;
-    height: 100%; /* Ensure card height is the same */
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
-    background: #245c97; /* Card background */
+    background: #245c97; 
 }
-
 .card-box-patrol::before {
     position: absolute;
     content: "";
@@ -368,7 +352,6 @@ nav .close-button, .menu-bar{
     transition: opacity 0.5s, top 0s, left 0s;
     z-index: 0; /* Behind card content */
 }
-
 .card-box-ctrm::before {
     position: absolute;
     content: "";
@@ -382,7 +365,6 @@ nav .close-button, .menu-bar{
     transition: opacity 0.5s, top 0s, left 0s;
     z-index: 0; /* Behind card content */
 }
-
 .card-box-stage::before {
     position: absolute;
     content: "";
@@ -396,7 +378,6 @@ nav .close-button, .menu-bar{
     transition: opacity 0.5s, top 0s, left 0s;
     z-index: 0; /* Behind card content */
 }
-
 .card-box-aud::before {
     position: absolute;
     content: "";
@@ -410,14 +391,12 @@ nav .close-button, .menu-bar{
     transition: opacity 0.5s, top 0s, left 0s;
     z-index: 0; /* Behind card content */
 }
-
 .card-box-patrol:hover::before,
 .card-box-ctrm:hover::before,
 .card-box-stage:hover::before,
 .card-box-aud:hover::before {
     opacity: 1; /* Show gradient on hover */
 }
-
 .card-box-patrol img,
 .card-box-ctrm img,
 .card-box-stage img,
@@ -426,7 +405,6 @@ nav .close-button, .menu-bar{
     z-index: 1; /* Ensure image is above the gradient */
     position: relative; /* Keep image on top */
 }
-
 .card-box-patrol::after,
 .card-box-ctrm::after,
 .card-box-stage::after,
@@ -438,12 +416,12 @@ nav .close-button, .menu-bar{
     border-radius: 18px;
     z-index: 0; /* Below the text and image */
 }
-
-.card-photo {   /*img-setting */
+.card-photo {   /*img-setting*/
     padding: 8px;
     width: 100%;
     height: 450px;
 }
+/*Card Content*/
 .card-title{
     font-family: "Kanit";
     font-weight: 500;
@@ -452,7 +430,7 @@ nav .close-button, .menu-bar{
 .card-text{
     font-family: "Kanit", sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 2px;
 }
 .card-body { /*text content part-setting */
@@ -465,6 +443,8 @@ nav .close-button, .menu-bar{
     z-index: 1; /* Ensure text is above the gradient */
 }
 
+
+/*footer setting*/
 footer{
     width: 100%;
     position: relative;
@@ -492,19 +472,19 @@ footer{
     flex-basis: 15%;
 }
 .fot-col .logo-container {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
+    display: flex; 
+    align-items: center; 
 }
 .logo{
     width: 100px;
     margin-bottom: 30px;
     margin-right: 10px;
 }
-.fot-col .logo-container h6{
-    color: #fff; /* Change the text color */
-    font-family: "Kanit", sans-serif; /* Use the same font */
-    font-weight: 600; /* Adjust font weight */
-    font-size: 40px; /* Adjust font size as needed */
+.fot-col .logo-container h6{ /*Footer Inferno Studio title*/
+    color: #fff;
+    font-family: "Kanit"; 
+    font-weight: 600; 
+    font-size: 40px; 
 }
 .fot-col h3{
     width: fit-content;
@@ -519,8 +499,8 @@ footer{
     text-decoration: underline;
 }
 
-.fot-col h5{
-    font-family: "Kanit", sans-serif;
+.fot-col h5{ /*Footer Inferno Studio introduction*/
+    font-family: "Kanit";
     font-weight: 600;
     font-size: 25px;
 }
@@ -642,6 +622,8 @@ hr{
         left: 100%;
     }
 }
+
+
 
 .contact{
     min-height: 100vh;
